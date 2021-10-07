@@ -12,14 +12,7 @@
   },
   {
     "id": 308,
-    "title": "Game Title 308",
-    "link": "https://apps.apple.com/us/app/braveland/id739040557",
-    "date": "2021-09-20",
-    "icon": "https://is5-ssl.mzstatic.com/image/thumb/Purple115/v4/08/d2/70/08d27006-5e17-ca6c-17dd-a2eeae6500d3/AppIcon-1x_U007emarketing-0-85-220-0-5.png/246x0w.webp",
-    "pros": [ "pro1", "pro2" ],
-    "cons": [ "con1", "con2", "con3", "con4" ],
-    "verdict": "Another beautiful verdict.",
-    "rating": 4
+    "title": "Game Title 308"
   },
   {
     "id": 307,
@@ -99,14 +92,7 @@
     "rating": 5
   },
   {
-    "id": 300,
-    "title": "Game Title 300",
-    "link": "https://apps.apple.com/us/app/braveland/id739040557",
-    "date": "2021-09-20",
-    "icon": "https://is5-ssl.mzstatic.com/image/thumb/Purple115/v4/08/d2/70/08d27006-5e17-ca6c-17dd-a2eeae6500d3/AppIcon-1x_U007emarketing-0-85-220-0-5.png/246x0w.webp",
-    "pros": [ "pro1", "pro2" ],
-    "cons": [ "con1", "con2", "con3", "con4" ],
-    "verdict": "Another beautiful verdict.",
-    "rating": 2
+    "id": 1,
+    "title": "Dark Nebula"
   }
 ]

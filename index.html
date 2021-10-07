@@ -106,7 +106,7 @@
                     <footer>
                         <hgroup>
                             <h2>Verdict:</h2>
-                            <h3><span x-text="reviews[index].verdict"></span></h3>
+                            <h3><span x-text="reviews[review_index].verdict"></span></h3>
                         </hgroup>
                         <div style="display: flex; justify-content: center;">
                             <svg role="img" viewBox="0 0 260 48" width="50%" height="50%" xmlns="http://www.w3.org/2000/svg">
@@ -130,6 +130,16 @@
         </div>
 
     </main>
+
+    <footer class="container">
+        Built with 
+        <a href="https://picocss.com" target="_blank">Pico.css</a>
+        and
+        <a href="https://alpinejs.dev" target="_blank">Alpine.js</a>
+        by
+        <a href="https://twitter.com/MaekToth" target="_blank">Marek Toth</a>
+        in 2021.
+    </footer>
 
     <!-- Minimal theme switcher -->
     <script src="js/minimal-theme-switcher.js"></script>
