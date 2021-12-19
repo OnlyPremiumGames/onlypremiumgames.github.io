@@ -4,17 +4,18 @@
     "title": "Legends of Kingdom Rush",
     "link": "https://apps.apple.com/us/app/braveland/id739040557",
     "date": "2021-09-30",
-    "icon": "https://is5-ssl.mzstatic.com/image/thumb/Purple115/v4/08/d2/70/08d27006-5e17-ca6c-17dd-a2eeae6500d3/AppIcon-1x_U007emarketing-0-85-220-0-5.png/246x0w.webp",
+    "icon": "/img/placeholder.svg",
     "pros": [
-      "pro pro pro1",
-      "pro pro2",
-      "pro3"
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
     ],
     "cons": [
-      "con1",
-      "con con con con2"
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
     ],
-    "verdict": "A little easy and a little on the short side, but has that \"one more fight\" attitude until the end.",
+    "verdict": "Placeholder Verdict.",
     "rating": 5
   },
   {
@@ -24,25 +25,551 @@
     "date": "2021-09-16",
     "icon": "https://is5-ssl.mzstatic.com/image/thumb/Purple115/v4/08/d2/70/08d27006-5e17-ca6c-17dd-a2eeae6500d3/AppIcon-1x_U007emarketing-0-85-220-0-5.png/246x0w.webp",
     "pros": [
-      "pro pro pro1",
-      "pro pro2",
-      "pro3"
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
     ],
     "cons": [
-      "con1",
-      "con con con con2"
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
     ],
     "verdict": "A little easy and a little on the short side, but has that \"one more fight\" attitude until the end.",
+    "rating": 4
+  },
+
+
+  {
+    "id": 308,
+    "title": "Death Squared",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-09-14",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
     "rating": 5
   },
   {
-    "id": 308,
-    "title": "Game Title 308",
-    "date": "2021-09-16"
+    "id": 307,
+    "title": "Outsider: After Life",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-09-01",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
   },
   {
-    "id": 307,
-    "title": "Game Title 307"
+    "id": 306,
+    "title": "Cards! - MonkeyBox 2",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-08-30",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 305,
+    "title": "Polarized! - MonkeyBox 1",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-08-26",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 304,
+    "title": "Grindstone",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-08-01",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 303,
+    "title": "Flipon",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-07-10",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 302,
+    "title": "Shadow Frog",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-07-03",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 301,
+    "title": "Slash Quest",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-07-01",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 300,
+    "title": "Book Of Myths",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-06-18",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 299,
+    "title": "hocus 2",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-04-24",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 298,
+    "title": "1/2 Halfway",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-04-20",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 297,
+    "title": "Fio - Figure It Out!",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-04-18",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 296,
+    "title": "Very Little Nightmares",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-04-10",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 295,
+    "title": "Alba",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-04-04",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 294,
+    "title": "SP!NG",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-03-29",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 293,
+    "title": "hocus.",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-03-19",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 292,
+    "title": "Inked",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-03-15",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 291,
+    "title": "Not Chess",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-03-08",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 290,
+    "title": "lumen.",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-03-02",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 289,
+    "title": "Kitty Letter",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-02-23",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 288,
+    "title": "Arrog",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-02-16",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 287,
+    "title": "Song of Bloom",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-02-14",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 286,
+    "title": "Queen Rules",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-02-14",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 285,
+    "title": "Mutant Mudds",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-02-11",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 284,
+    "title": "Winding Worlds",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-02-01",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 283,
+    "title": "WHAT THE GOLF?",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-01-26",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 282,
+    "title": "Card of Darkness",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-01-20",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 281,
+    "title": "Bird Alone",
+    "link": "https://apps.apple.com/us/app/braveland/id739040557",
+    "date": "2021-01-17",
+    "icon": "/img/placeholder.svg",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
   },
   {
     "id": 280,
