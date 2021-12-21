@@ -70,7 +70,7 @@
         </nav>
     </header>
 
-    <main x-data="{ reviews: [], count: 3 }" x-init="reviews = await (await fetch('/data/data.json')).json();" class="container">
+    <main x-data="{ reviews: [], count: 3 }" x-init="reviews = await (await fetch('/data/data.json')).json();" class="container" style="padding-top: 0;">
 
         <!--<template x-for="index in Array.from( { length: reviews }, (v, i) => i)">-->
 
@@ -78,11 +78,11 @@
             <template x-for="(review, review_index) in count">
 
                 <article x-bind:id="reviews[review_index].id">
-                    <template x-if="reviews[review_index].link && reviews[review_index].icon && reviews[review_index].pros && reviews[review_index].cons && reviews[review_index].verdict && reviews[review_index].rating">
+                    <template x-if="reviews[review_index].link && reviews[review_index].pros && reviews[review_index].cons && reviews[review_index].verdict && reviews[review_index].rating">
                         <div>
                             <header style="display: flex">
                                 <a x-bind:href="reviews[review_index].link" target="_blank">
-                                    <img width="100" height="100" style="border-radius: 25%" x-bind:src="reviews[review_index].icon">
+                                    <img width="100" height="100" style="border-radius: 25%" x-bind:src="'img/' + reviews[review_index].id + '.webp'">
                                 </a>
                                 <hgroup style="margin-left: 1rem">
                                     <h2>
@@ -102,9 +102,9 @@
                                         <summary>Pros</summary>
                                         <ul>
                                             <template x-if="reviews[review_index].pros.length > 0">
-                                                <template x-for="(pro, pro_index) in reviews[review_index].pros.length">
+                                                <template x-for="pro in reviews[review_index].pros">
                                                     <li>
-                                                        <span x-text="reviews[review_index].pros[pro_index]"></span>
+                                                        <span x-text="pro"></span>
                                                     </li>
                                                 </template>
                                             </template>
@@ -116,9 +116,9 @@
                                         <summary>Cons</summary>
                                         <ul>
                                             <template x-if="reviews[review_index].cons.length > 0">
-                                                <template x-for="(con, con_index) in reviews[review_index].cons.length">
+                                                <template x-for="con in reviews[review_index].cons">
                                                     <li>
-                                                        <span x-text="reviews[review_index].cons[con_index]"></span>
+                                                        <span x-text="con"></span>
                                                     </li>
                                                 </template>
                                             </template>
@@ -149,7 +149,7 @@
                     </template>
                 
                     <!-- Old reviews -->
-                    <template x-if="!(reviews[review_index].link && reviews[review_index].icon && reviews[review_index].pros && reviews[review_index].cons && reviews[review_index].verdict && reviews[review_index].rating)">
+                    <template x-if="!(reviews[review_index].link && reviews[review_index].pros && reviews[review_index].cons && reviews[review_index].verdict && reviews[review_index].rating)">
                         <div style="display: flex">
                             <hgroup style="margin-left: 1rem">
                                 <h2>
@@ -175,7 +175,7 @@
         </div>
     </main>
 
-    <footer class="container">
+    <footer class="container" style="text-align: center;">
         Built with
         <a href="https://picocss.com" target="_blank">Pico.css</a>
         and
