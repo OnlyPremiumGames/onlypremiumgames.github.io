@@ -1,7 +1,7 @@
 const toggleTheme = {
 
     // Config
-    buttonsTarget: 'a[data-theme-switcher]',
+    buttonsTarget: 'a[data-theme-toggler]',
     rootAttribute: 'data-theme',
 
     // Change
