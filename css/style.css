@@ -6,6 +6,6 @@ h2 {
   margin-bottom: 0;
 }
 
-footer {
+body > footer {
   text-align: center;
 }
