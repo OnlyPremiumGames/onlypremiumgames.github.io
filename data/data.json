@@ -15,7 +15,7 @@
       "Placeholder Con"
     ],
     "verdict": "Placeholder Verdict.",
-    "rating": 5
+    "rating": 6
   },
   {
     "id": 309,
@@ -75,7 +75,7 @@
   },
   {
     "id": 306,
-    "title": "Cards! – MonkeyBox 2",
+    "title": "Cards! - MonkeyBox 2",
     "link": "https://apps.apple.com/us/app/cards-monkeybox-2/id1517314283",
     "date": "2021-08-30",
     "pros": [
@@ -151,17 +151,14 @@
     "link": "https://apps.apple.com/us/app/shadow-frog/id1509028414",
     "date": "2021-07-03",
     "pros": [
-      "Placeholder Pro",
-      "Placeholder Pro",
-      "Placeholder Pro"
+      "Cool shadow mechanic.",
+      "Good number of levels."
     ],
     "cons": [
-      "Placeholder Con",
-      "Placeholder Con",
-      "Placeholder Con"
+      "Shaodw mechanic can be ignored."
     ],
-    "verdict": "Placeholder Verdict.",
-    "rating": 5
+    "verdict": "A solid platformer with an intresting mechanic which can be, unfortunately, completely ignored.",
+    "rating": 3
   },
   {
     "id": 301,
@@ -277,17 +274,16 @@
     "link": "https://apps.apple.com/us/app/alba-a-wildlife-adventure/id1528014682",
     "date": "2021-04-04",
     "pros": [
-      "Placeholder Pro",
-      "Placeholder Pro",
-      "Placeholder Pro"
+      "Strong message.",
+      "Beautiful presentation.",
+      "Suitable for young audience."
     ],
     "cons": [
-      "Placeholder Con",
-      "Placeholder Con",
-      "Placeholder Con"
+      "Performance hickups on iPhone 8.",
+      "No real challenge."
     ],
-    "verdict": "Placeholder Verdict.",
-    "rating": 5
+    "verdict": "A beatiful game for a great cause which does not challenge a skilled gamer, for better or worse.",
+    "rating": 4
   },
   {
     "id": 294,
@@ -349,17 +345,19 @@
     "link": "https://apps.apple.com/us/app/not-chess/id1535659343",
     "date": "2021-03-08",
     "pros": [
-      "Placeholder Pro",
-      "Placeholder Pro",
+      "Simple, but interesting twist on the chess formula.",
+      "Has that 'one more level' vibe.",
       "Placeholder Pro"
     ],
     "cons": [
-      "Placeholder Con",
-      "Placeholder Con",
-      "Placeholder Con"
+      "Strange color palette in Very hard.",
+      "Some occassional crashes.",
+      "Need to back to menu to select next level.",
+      "Missing GameCenter integration.",
+      "No 'game complete' screen."
     ],
-    "verdict": "Placeholder Verdict.",
-    "rating": 5
+    "verdict": "A fresh twist on chess puzzling which is missing some finishing 'touches' to make it really shine.",
+    "rating": 4
   },
   {
     "id": 290,
@@ -542,6 +540,10 @@
     "rating": 5
   },
   {
+    "id": 0,
+    "title": "Following is the list of games I completed.<br>No more reviews, just a plain list to keep track for myself.<br>Thanks for scrolling this far :)"
+  },
+  {
     "id": 280,
     "title": "Far from Noise",
     "date": "2020-12-30"
@@ -678,7 +680,7 @@
   },
   {
     "id": 253,
-    "title": "LEGO Builder’s Journey",
+    "title": "LEGO Builder's Journey",
     "date": "2020-01-26"
   },
   {
@@ -863,7 +865,7 @@
   },
   {
     "id": 216,
-    "title": "Old Man’s Journey",
+    "title": "Old Man's Journey",
     "date": "2018-10-17"
   },
   {
