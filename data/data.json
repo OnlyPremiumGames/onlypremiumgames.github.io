@@ -1,9 +1,9 @@
 [
   {
-    "id": 310,
-    "title": "Legends of Kingdom Rush - RPG",
-    "link": "https://apps.apple.com/us/app/legends-of-kingdom-rush-rpg/id1542046924",
-    "date": "2021-09-30",
+    "id": 318,
+    "title": "Aerial_Knight's Never Yield",
+    "link": "https://apps.apple.com/us/app/aerial-knights-never-yield/id1603801904",
+    "date": "2022-04-06",
     "pros": [
       "Placeholder Pro",
       "Placeholder Pro",
@@ -15,117 +15,168 @@
       "Placeholder Con"
     ],
     "verdict": "Placeholder Verdict.",
-    "rating": 6
+    "rating": 4
+  },
+  {
+    "id": 317,
+    "title": "Shatter Remastered",
+    "link": "https://apps.apple.com/us/app/shatter-remastered/id1605234654",
+    "date": "2022-04-03",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 4
+  },
+  {
+    "id": 316,
+    "title": "Unleash the Light",
+    "link": "https://apps.apple.com/us/app/unleash-the-light/id1434863691",
+    "date": "2022-03-29",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 4
+  },
+  {
+    "id": 315,
+    "title": "The Longest Road On Earth",
+    "link": "https://apps.apple.com/us/app/the-longest-road-on-earth/id1538591290",
+    "date": "2022-02-07",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 3
+  },
+  {
+    "id": 314,
+    "title": "Bright Paw",
+    "link": "https://apps.apple.com/us/app/bright-paw/id1508643589",
+    "date": "2022-01-29",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 3
+  },
+  {
+    "id": 313,
+    "title": "SteamWorld Quest",
+    "link": "https://apps.apple.com/us/app/steamworld-quest/id14830510494",
+    "date": "2022-01-05",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 4
+  },
+  {
+    "id": 312,
+    "title": "The Last Campfire",
+    "link": "https://apps.apple.com/us/app/the-last-campfire/id973039644",
+    "date": "2021-12-14",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 4
+  },
+  {
+    "id": 311,
+    "title": "Bleak Sword",
+    "link": "https://apps.apple.com/us/app/bleak-sword/id1403554793",
+    "date": "2021-11-23",
+    "pros": [
+      "Placeholder Pro",
+      "Placeholder Pro",
+      "Placeholder Pro"
+    ],
+    "cons": [
+      "Placeholder Con",
+      "Placeholder Con",
+      "Placeholder Con"
+    ],
+    "verdict": "Placeholder Verdict.",
+    "rating": 5
+  },
+  {
+    "id": 310,
+    "title": "Legends of Kingdom Rush - RPG",
+    "date": "2021-09-30"
   },
   {
     "id": 309,
     "title": "Braveland",
-    "link": "https://apps.apple.com/us/app/braveland/id739040557",
-    "date": "2021-09-16",
-    "pros": [
-      "Placeholder Pro",
-      "Placeholder Pro",
-      "Placeholder Pro"
-    ],
-    "cons": [
-      "Placeholder Con",
-      "Placeholder Con",
-      "Placeholder Con"
-    ],
-    "verdict": "A little easy and a little on the short side, but has that \"one more fight\" attitude until the end.",
-    "rating": 4
+    "date": "2021-09-16"
   },
-
-
   {
     "id": 308,
     "title": "Death Squared (RORORORO)",
-    "link": "https://apps.apple.com/us/app/death-squared-rorororo/id1023960081",
-    "date": "2021-09-14",
-    "pros": [
-      "Placeholder Pro",
-      "Placeholder Pro",
-      "Placeholder Pro"
-    ],
-    "cons": [
-      "Placeholder Con",
-      "Placeholder Con",
-      "Placeholder Con"
-    ],
-    "verdict": "Placeholder Verdict.",
-    "rating": 5
+    "date": "2021-09-14"
   },
   {
     "id": 307,
     "title": "Outsider: After Life",
-    "link": "https://apps.apple.com/us/app/outsider-after-life/id1509601048",
-    "date": "2021-09-01",
-    "pros": [
-      "Placeholder Pro",
-      "Placeholder Pro",
-      "Placeholder Pro"
-    ],
-    "cons": [
-      "Placeholder Con",
-      "Placeholder Con",
-      "Placeholder Con"
-    ],
-    "verdict": "Placeholder Verdict.",
-    "rating": 5
+    "date": "2021-09-01"
   },
   {
     "id": 306,
     "title": "Cards! - MonkeyBox 2",
-    "link": "https://apps.apple.com/us/app/cards-monkeybox-2/id1517314283",
-    "date": "2021-08-30",
-    "pros": [
-      "Placeholder Pro",
-      "Placeholder Pro",
-      "Placeholder Pro"
-    ],
-    "cons": [
-      "Placeholder Con",
-      "Placeholder Con",
-      "Placeholder Con"
-    ],
-    "verdict": "Placeholder Verdict.",
-    "rating": 5
+    "date": "2021-08-30"
   },
   {
     "id": 305,
     "title": "Polarized! - MonkeyBox 1",
-    "link": "https://apps.apple.com/us/app/polarized-monkeybox-1/id1493631918",
-    "date": "2021-08-26",
-    "pros": [
-      "Placeholder Pro",
-      "Placeholder Pro",
-      "Placeholder Pro"
-    ],
-    "cons": [
-      "Placeholder Con",
-      "Placeholder Con",
-      "Placeholder Con"
-    ],
-    "verdict": "Placeholder Verdict.",
-    "rating": 5
+    "date": "2021-08-26"
   },
   {
     "id": 304,
     "title": "Grindstone",
-    "link": "https://apps.apple.com/us/app/grindstone/id1357426636",
-    "date": "2021-08-01",
-    "pros": [
-      "Placeholder Pro",
-      "Placeholder Pro",
-      "Placeholder Pro"
-    ],
-    "cons": [
-      "Placeholder Con",
-      "Placeholder Con",
-      "Placeholder Con"
-    ],
-    "verdict": "Placeholder Verdict.",
-    "rating": 5
+    "date": "2021-08-01"
   },
   {
     "id": 303,

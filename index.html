@@ -14,11 +14,6 @@
 <body>
     <header class="container">
         <nav>
-            <ul class="sides">
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-            </ul>
             <ul>
                 <li>
                     <a href="index.html">
@@ -28,12 +23,16 @@
                             <polygon points="120,149 120,270 270,270 270,180 180,180 180,210 240,210 240,240 150,240 150,149"/>
                             <polygon points="209,120 270,120 270,150 209,150"/>
                         </svg>
+                        <span><strong>Only Premium Games</strong></span>
                     </a>
                 </li>
             </ul>
-            <ul class="sides">
+            <ul>
                 <li>
-                    <a href="#" data-theme-toggler="dark">Theme</a>
+                    <a href="about.html"><strong>About</strong></a>
+                </li>
+                <li>
+                    <a href="#" class="theme" data-theme-toggler="dark"><strong>Theme</strong></a>
                 </li>
             </ul>
         </nav>
@@ -42,11 +41,11 @@
     <main class="container" style="padding-top: 0">
 
         <div x-data="{ games: [], count: 3 }" x-init="games = await (await fetch('/data/data.json')).json();">
-            <h1>Finished Games:</h1>
+            <h2>Finished Games</h2>
             <template x-if="games.length > 0">
                 <template x-for="(game, game_index) in count">
                     <div>
-                        <template x-if="games[game_index].id == 303">
+                        <template x-if="games[game_index].id == 310">
                             <h2>No more thoughts from here on. Just a plain list to keep track for myself ...</h2>
                         </template>
                         <article x-bind:id="games[game_index].id">
@@ -120,10 +119,10 @@
                             <template x-if="games[game_index].verdict && games[game_index].rating">
                                 <footer>
                                     <hgroup>
-                                        <h2>Verdict:</h2>
-                                        <h3>
+                                        <h3>Verdict:</h3>
+                                        <h4>
                                             <span x-text="games[game_index].verdict"></span>
-                                        </h3>
+                                        </h4>
                                     </hgroup>
                                     <div style="display: flex; justify-content: center">
                                         <svg role="img" viewBox="0 0 260 48" width="50%" height="50%" xmlns="http://www.w3.org/2000/svg">
@@ -156,7 +155,7 @@
         and
         <a href="https://alpinejs.dev" target="_blank">Alpine.js</a>
         by
-        <a href="https://twitter.com/MaekToth" target="_blank">Ma(r)ek Toth</a>
+        <a href="about.html" >Ma(r)ek Toth</a>
         in 2022.
     </footer>
 

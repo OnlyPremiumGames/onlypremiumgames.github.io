@@ -14,8 +14,8 @@ body > footer {
   text-align: center;
 }
 
-.sides {
-  align-items: flex-end;
+.theme {
+  color: var(--contrast)
 }
 
 /*
