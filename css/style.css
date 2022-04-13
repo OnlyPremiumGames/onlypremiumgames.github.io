@@ -15,9 +15,18 @@ body > footer {
 }
 
 .theme {
-  color: var(--contrast)
+  color: var(--contrast);
 }
 
+.rightaligned {
+  justify-content: flex-end;
+}
+
+/* Why is this not working?
+body > nav {
+  flex-wrap: wrap;
+}
+*/
 /*
 body > nav {
   -webkit-backdrop-filter: saturate(180%) blur(20px);

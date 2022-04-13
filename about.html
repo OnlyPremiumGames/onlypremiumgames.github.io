@@ -13,7 +13,7 @@
 
 <body>
     <header class="container">
-        <nav>
+        <nav style="flex-wrap: wrap;">
             <ul>
                 <li>
                     <a href="index.html">
@@ -23,11 +23,13 @@
                             <polygon points="120,149 120,270 270,270 270,180 180,180 180,210 240,210 240,240 150,240 150,149"/>
                             <polygon points="209,120 270,120 270,150 209,150"/>
                         </svg>
-                        <span><strong>Only Premium Games</strong></span>
                     </a>
                 </li>
+                <li>
+                    <span style="color: var(--primary);"><strong>Only Premium Games</strong></span>
+                </li>
             </ul>
-            <ul>
+            <ul class="rightaligned">
                 <li>
                     <a href="index.html"><strong>Home</strong></a>
                 </li>
@@ -69,41 +71,62 @@
             </p>
         </article>
         <h2>Playing</h2>
-        <article id="playing">
+        <article id="playing1">
+            <div style="display: flex">
+                <a style="flex-grow: 1" href="https://apps.apple.com/us/app/wordsmyth-a-daily-word-game/id1534959553" target="_blank">
+                    <img width="100%" height="100%" style="max-width: 100px; max-height: 100px; border-radius: 25%" src="img/wordsmyth.webp">
+                </a>
+                <a style="flex-grow: 8" href="https://apps.apple.com/us/app/wordsmyth-a-daily-word-game/id1534959553" target="_blank">
+                    <span><h3>Wordsmyth - A Daily Word Game</h3></span>
+                </a>
+            </div>
+        </article>
+        <article id="playing2">
+            <div style="display: flex">
+                <a style="flex-grow: 1" href="https://apps.apple.com/us/app/creaks/id1466040723" target="_blank">
+                    <img width="100%" height="100%" style="max-width: 100px; max-height: 100px; border-radius: 25%" src="img/creaks.webp">
+                </a>
+                <a style="flex-grow: 8" href="https://apps.apple.com/us/app/creaks/id1466040723" target="_blank">
+                    <span><h3>Creaks</h3></span>
+                </a>
+            </div>
+        </article>
+
+<!--
             <table>
                 <tbody>
                     <tr>
                         <td style="display: flex">
-                            <a href="https://apps.apple.com/us/app/wordsmyth-a-daily-word-game/id1534959553" target="_blank">
-                                <img width="100px" height="100px" style="border-radius: 25%" src="img/wordsmyth.webp">
+                            <a style="flex-grow: 1" href="https://apps.apple.com/us/app/wordsmyth-a-daily-word-game/id1534959553" target="_blank">
+                                <img width="100" height="100" style="border-radius: 25%" src="img/wordsmyth.webp">
                             </a>
-                            <a style="margin-left: 1rem" href="https://apps.apple.com/us/app/wordsmyth-a-daily-word-game/id1534959553" target="_blank">
+                            <a style="flex-grow: 1" href="https://apps.apple.com/us/app/wordsmyth-a-daily-word-game/id1534959553" target="_blank">
                                 <span><h3>Wordsmyth - A Daily Word Game</h3></span>
                             </a>
                         </td>
                     </tr>
                     <tr>
                         <td style="display: flex">
-                            <a href="https://apps.apple.com/us/app/creaks/id1466040723" target="_blank">
-                                <img width="100px" height="100px" style="border-radius: 25%" src="img/creaks.webp">
+                            <a style="flex-grow: 1" href="https://apps.apple.com/us/app/creaks/id1466040723" target="_blank">
+                                <img width="100" height="100" style="border-radius: 25%" src="img/creaks.webp">
                             </a>
-                            <a style="margin-left: 1rem" href="https://apps.apple.com/us/app/creaks/id1466040723" target="_blank">
+                            <a style="flex-grow: 3" href="https://apps.apple.com/us/app/creaks/id1466040723" target="_blank">
                                 <span><h3>Creaks</h3></span>
                             </a>
                         </td>
                     </tr>
                     <tr>
                         <td style="display: flex">
-                            <a href="https://apps.apple.com/us/app/little-orpheus/id1446279575" target="_blank">
-                                <img width="100px" height="100px" style="border-radius: 25%" src="img/little_orpheus.webp">
+                            <a style="flex-grow: 1" href="https://apps.apple.com/us/app/little-orpheus/id1446279575" target="_blank">
+                                <img width="100" height="100" style="border-radius: 25%" src="img/little_orpheus.webp">
                             </a>
-                            <a style="margin-left: 1rem" href="https://apps.apple.com/us/app/little-orpheus/id1446279575" target="_blank">
+                            <a style="flex-grow: 3" href="https://apps.apple.com/us/app/little-orpheus/id1446279575" target="_blank">
                                 <span><h3>Little Orpheus</h3></span>
                             </a>
                         </td>
                     </tr>
                 </tbody>
-            </table>
+            </table>-->
         </article>
     </main>
 
