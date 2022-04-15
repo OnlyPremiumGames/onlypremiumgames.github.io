@@ -47,7 +47,7 @@ body > footer {
   }
 
   nav ul.links {
-    align-self: flex-end;
+    align-self: center;
   }
 }
 
