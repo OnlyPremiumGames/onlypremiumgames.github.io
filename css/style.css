@@ -1,3 +1,11 @@
+nav {
+  flex-direction: column;
+}
+
+nav ul.links {
+  align-self: flex-end;
+}
+
 a:focus {
   background-color: transparent;
 }
@@ -18,8 +26,41 @@ body > footer {
   color: var(--contrast);
 }
 
-.rightaligned {
-  justify-content: flex-end;
+.image {
+  border-radius: 25%;
+  min-width: 60px;
+}
+
+@media (min-width: 576px) {
+  :root {
+    
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    
+  }
+
+  nav {
+    flex-direction: row;
+  }
+
+  nav ul.links {
+    align-self: flex-end;
+  }
+}
+
+@media (min-width: 992px) {
+  :root {
+    
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    
+  }
 }
 
 /* Why is this not working?

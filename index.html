@@ -13,8 +13,8 @@
 
 <body>
     <header class="container">
-        <nav style="flex-wrap: wrap;">
-            <ul>
+        <nav>
+            <ul class="logo">
                 <li>
                     <a href="index.html">
                         <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 270 270" width="100%" height="100%" style="max-width: 270px; max-height: 270px" fill="currentColor" stroke="none" stroke-width="0" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +29,7 @@
                     <span style="color: var(--primary);"><strong>Only Premium Games</strong></span>
                 </li>
             </ul>
-            <ul class="rightaligned">
+            <ul class="links">
                 <li>
                     <a href="about.html"><strong>About</strong></a>
                 </li>
@@ -54,7 +54,7 @@
                             <template x-if="games[game_index].link">
                                 <header style="display: flex">
                                     <a x-bind:href="games[game_index].link" target="_blank">
-                                        <img width="100px" height="100px" style="border-radius: 25%" x-bind:src="'img/' + games[game_index].id + '.webp'">
+                                        <img width="100px" height="100px" class="image" x-bind:src="'img/' + games[game_index].id + '.webp'">
                                     </a>
                                     <hgroup style="margin-left: 1rem">
                                         <h3>
