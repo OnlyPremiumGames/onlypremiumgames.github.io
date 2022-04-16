@@ -53,8 +53,8 @@
                         <article x-bind:id="games[game_index].id">
                             <template x-if="games[game_index].link">
                                 <header style="display: flex">
-                                    <a x-bind:href="games[game_index].link" target="_blank">
-                                        <img width="100px" height="100px" class="image" x-bind:src="'img/' + games[game_index].id + '.webp'">
+                                    <a x-bind:href="games[game_index].link" class="image" target="_blank">
+                                        <img x-bind:src="'img/' + games[game_index].id + '.webp'">
                                     </a>
                                     <hgroup style="margin-left: 1rem">
                                         <h3>
