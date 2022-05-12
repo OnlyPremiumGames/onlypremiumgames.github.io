@@ -17,7 +17,7 @@
             <ul class="logo">
                 <li>
                     <a href="index.html">
-                        <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 270 270" width="100%" height="100%" style="max-width: 270px; max-height: 270px" fill="currentColor" stroke="none" stroke-width="0" xmlns="http://www.w3.org/2000/svg">
+                        <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 270 270" width="100%" height="100%" fill="currentColor" stroke="none" stroke-width="0" xmlns="http://www.w3.org/2000/svg">
                             <polygon points="0,0 150,0 150,61 120,61 120,30 30,30 30,120 61,120 61,150 0,150"/>
                             <polygon points="60,210 60,60 210,60 210,150 90,150 90,120 180,120 180,90 90,90 90,210"/>
                             <polygon points="120,149 120,270 270,270 270,180 180,180 180,210 240,210 240,240 150,240 150,149"/>
@@ -26,7 +26,7 @@
                     </a>
                 </li>
                 <li>
-                    <span style="color: var(--primary);"><strong>Only Premium Games</strong></span>
+                    <span><strong>Only <br>Premium <br>Games</strong></span>
                 </li>
             </ul>
             <ul class="links">
@@ -40,16 +40,18 @@
         </nav>
     </header>
 
-    <main class="container" style="padding-top: 0;">
+    <main class="container">
         <h2>About</h2>
         <article id="about">
             <p>
-                Hello, my name is <a href="https://twitter.com/MaekToth" target="_blank"><strong>Ma(r)ek</strong></a>, I'm from Slovakia and I play <strong>only premium games</strong>
-                on my Apple devices. After finishing more than 300 of them I realized that someone might find it helpful to read some quick thoughts on these games.<br><br>
+                Hello, my name is <a href="https://twitter.com/MaekToth" target="_blank"><strong>Ma(r)ek</strong></a>, I'm from Slovakia
+                and I play <a href="index.html" target="_blank"><strong>only premium games</strong></a> on my iPhone and iPad.
+                After finishing more than 300 of them I realized that someone might find it helpful to read some quick thoughts on these games.<br><br>
                 By finishing I mean that I either saw the "thanks for playing" screen or the credits roll.<br><br>
-                By <strong>premium</strong> I mean games for which I pay upfornt money and I get the whole experience. I'm also OK with trying games for free and then paying to unlock content.
+                By premium I mean games for which I pay upfornt money and I get the whole experience.
+                I'm also OK with trying games for free and then paying to unlock content.
                 I consider games on subscription services like Apple Arcade or Netflix premium, too.<br><br>
-                But, I <strong>avoid</strong> games containing purchases for <strong>ads removal</strong> or games with <strong>double currencies</strong>.<br><br>
+                But, I avoid games containing purchases for ads removal or games with double currencies.<br><br>
                 There are some exceptions in my list, but those all have their own reasons.
             </p>
         </article>
@@ -59,10 +61,10 @@
             <p>
                 If I'll ask you for a promo code please keep the following in mind:<br>
                 <li>
-                    I only post my thoughts on games I complete.
+                    I only post my thoughts on games I finish.
                 </li>
                 <li>
-                    I rarely don't complete games I start playing and enjoy.
+                    I rarely don't finish games I start playing and enjoy.
                 </li>
                 <li>
                     I play games new and old - in no particular order.
@@ -72,47 +74,34 @@
             </p>
         </article>
 
-        <h2>Playing</h2>
-        <article id="playing">
-            <header style="display: flex">
-                <a href="https://apps.apple.com/us/app/wordsmyth-a-daily-word-game/id1534959553" class="image" target="_blank">
-                    <img src="img/wordsmyth.webp">
-                </a>
-                <h3 style="margin-left: 1rem">
-                    <a href="https://apps.apple.com/us/app/wordsmyth-a-daily-word-game/id1534959553" target="_blank">
-                        <span>Wordsmyth - A Daily Word Game</span>
-                    </a>
-                </h3>
-            </header>
-            <div style="display: flex">
-                <a href="https://apps.apple.com/us/app/creaks/id1466040723" class="image" target="_blank">
-                    <img src="img/creaks.webp">
-                </a>
-                <h3 style="margin-left: 1rem">
-                    <a href="https://apps.apple.com/us/app/creaks/id1466040723" target="_blank">
-                        <span>Creaks</span>
-                    </a>
-                </h3>
-            </div>
-            <footer style="display: flex">
-                <a href="https://apps.apple.com/us/app/the-chronos-principle/id1551295225" class="image" target="_blank">
-                    <img src="img/chronos_principle.webp">
-                </a>
-                <h3 style="margin-left: 1rem">
-                    <a href="https://apps.apple.com/us/app/the-chronos-principle/id1551295225" target="_blank">
-                        <span>The Chronos Principle</span>
-                    </a>
-                </h3>
-            </footer>
-        </article>
-    </main>
+        <div x-data="{ games: [] }" x-init="games = await (await fetch('/data/top.json')).json();">
+            <h2>Personal Top</h2>
+            <article id="top">
+                <template x-if="games.length > 0">
+                    <ul>
+                        <template x-for="(game, game_index) in games.length">
+                            <li>
+                                <a x-bind:href="games[game_index].link" class="image" target="_blank">
+                                    <img x-bind:src="'img/t' + games[game_index].id + '.webp'">
+                                </a>
+                                <h3 class="space">
+                                    <a x-bind:href="games[game_index].link" target="_blank">
+                                        <span x-html="games[game_index].title"></span>
+                                    </a>
+                                </h3>
+                            </li>
+                        </template>
+                    </ul>
+                </template>
+            </article>
+        </div>
 
     <footer class="container">
         Built with
         <a href="https://picocss.com" target="_blank">Pico.css</a>
         and
         <a href="https://alpinejs.dev" target="_blank">Alpine.js</a>
-        by
+        <br>by
         <a href="about.html" >Ma(r)ek Toth</a>
         in 2022.
     </footer>
