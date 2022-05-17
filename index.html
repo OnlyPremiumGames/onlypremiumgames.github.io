@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/style.css" />
     <script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
     <script defer src="js/init-theme.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geo&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -26,7 +29,7 @@
                     </a>
                 </li>
                 <li>
-                    <span><strong>Only <br>Premium <br>Games</strong></span>
+                    <span class="gfont"><strong>Only <br>Premium <br>Games</strong></span>
                 </li>
             </ul>
             <ul class="links">
@@ -47,14 +50,14 @@
             <article id="playing">
                 <template x-if="games.length > 0">
                     <ul>
-                        <template x-for="(game, game_index) in games.length">
+                        <template x-for="game in games">
                             <li>
-                                <a x-bind:href="games[game_index].link" class="image" target="_blank">
-                                    <img x-bind:src="'img/p' + games[game_index].id + '.webp'">
+                                <a x-bind:href="game.link" class="image" target="_blank">
+                                    <img x-bind:src="'img/p' + game.id + '.webp'">
                                 </a>
                                 <h3 class="space">
-                                    <a x-bind:href="games[game_index].link" target="_blank">
-                                        <span x-html="games[game_index].title"></span>
+                                    <a x-bind:href="game.link" target="_blank">
+                                        <span x-html="game.title"></span>
                                     </a>
                                 </h3>
                             </li>
@@ -115,7 +118,7 @@
                                             <ul>
                                                 <template x-if="games[game_index].pros.length > 0">
                                                     <template x-for="pro in games[game_index].pros">
-                                                        <li style="list-style-type: '+ '">
+                                                        <li class="pro">
                                                             <span x-text="pro"></span>
                                                         </li>
                                                     </template>
@@ -129,7 +132,7 @@
                                             <ul>
                                                 <template x-if="games[game_index].cons.length > 0">
                                                     <template x-for="con in games[game_index].cons">
-                                                        <li style="list-style-type: '- '">
+                                                        <li class="con">
                                                             <span x-text="con"></span>
                                                         </li>
                                                     </template>

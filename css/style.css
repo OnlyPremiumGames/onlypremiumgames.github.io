@@ -32,20 +32,26 @@ body > footer {
   text-align: center;
 }
 
-article > header, article > footer {
+article > header {
   display: flex;
 }
 
 article > footer {
+  display: flex;
   flex-direction: column;
 }
 
-article li {
+article > ul > li {
   display: flex;
 }
-
+/*
 article li:nth-child(odd) {
   background-color: var(--card-sectionning-background-color);
+}
+*/
+.gfont {
+  font-family: 'Geo', sans-serif;
+  font-size: 42px;
 }
 
 .space {
@@ -61,6 +67,14 @@ article li:nth-child(odd) {
   color: var(--contrast);
 }
 
+.pro {
+  list-style-type: '+ ';
+}
+
+.con {
+  list-style-type: '- ';
+}
+
 .image {
   width: 20%;
   min-width: 20%;
@@ -72,6 +86,11 @@ article li:nth-child(odd) {
   border-style: solid;
   border-width: 2px;
   width: 100%;
+}
+
+details {
+  border-bottom: none;
+  padding-bottom: 0rem;
 }
 
 @media (min-width: 576px) {
