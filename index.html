@@ -47,7 +47,7 @@
 
         <div x-data="{ games: [] }" x-init="games = await (await fetch('/data/playing.json')).json();">
             <h2>Playing Now</h2>
-            <article id="playing">
+            <article id="playing" class="list">
                 <template x-if="games.length > 0">
                     <ul>
                         <template x-for="game in games">
@@ -114,7 +114,7 @@
                                 <div class="grid">
                                     <div>
                                         <details open>
-                                            <summary>Pros</summary>
+                                            <summary><span>Pros</span></summary>
                                             <ul>
                                                 <template x-if="games[game_index].pros.length > 0">
                                                     <template x-for="pro in games[game_index].pros">
@@ -128,7 +128,7 @@
                                     </div>
                                     <div>
                                         <details open>
-                                            <summary>Cons</summary>
+                                            <summary><span>Cons</span></summary>
                                             <ul>
                                                 <template x-if="games[game_index].cons.length > 0">
                                                     <template x-for="con in games[game_index].cons">
@@ -167,7 +167,7 @@
                     </div>
             </template>
         </template>
-            <div class="center">
+            <div class="center buttons">
                 <div x-show="count != games.length">
                     <button class="secondary" x-on:click="count + 3 > games.length ? count = games.length : count += 3">Load more ...</button>
                 </div>

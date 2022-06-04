@@ -15,6 +15,19 @@ nav svg {
   max-height: 270px;
 }
 
+body > main {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.buttons {
+  padding: 0 var(--block-spacing-horizontal) var(--block-spacing-vertical) var(--block-spacing-horizontal);
+}
+
+.buttons button {
+  margin-bottom: 0;
+}
+
 a:focus {
   background-color: transparent;
 }
@@ -36,6 +49,38 @@ article > header {
   display: flex;
 }
 
+article.list {
+  padding: 0;
+}
+
+article.list ul {
+  margin: 0;
+  padding: 0;
+}
+
+article.list ul li {
+  margin: 0;
+  border-bottom: var(--border-width) solid var(--card-border-color);
+  padding: calc(var(--block-spacing-vertical) / 1.5) var(--block-spacing-horizontal);
+  background-color: var(--card-background-color);
+}
+
+article.reverse.list ul li {
+  background-color: var(--card-sectionning-background-color);
+}
+
+article.list ul li:nth-child(even) {
+  background-color: var(--card-sectionning-background-color);
+}
+
+article.reverse.list ul li:nth-child(even) {
+  background-color: var(--card-background-color);
+}
+
+article.list h3 {
+  margin-bottom: 0;
+}
+
 article > footer {
   display: flex;
   flex-direction: column;
@@ -44,11 +89,15 @@ article > footer {
 article > ul > li {
   display: flex;
 }
-/*
-article li:nth-child(odd) {
-  background-color: var(--card-sectionning-background-color);
+
+details span {
+  padding-left: var(--spacing);
 }
-*/
+
+details summary span {
+  padding-left: 0;
+}
+
 .gfont {
   font-family: 'Geo', sans-serif;
   font-size: 42px;
@@ -83,14 +132,20 @@ article li:nth-child(odd) {
 
 .image > img {
   /*border-radius: 25%;*/
-  border-style: solid;
-  border-width: 2px;
+  /* border-style: solid;
+  border-width: 2px; */
+  box-shadow: var(--card-box-shadow);
+  /* box-shadow: 5px 5px 5px; */
   width: 100%;
 }
 
 details {
   border-bottom: none;
   padding-bottom: 0rem;
+}
+
+body > footer {
+  padding-top: 0;
 }
 
 @media (min-width: 576px) {
@@ -121,11 +176,23 @@ details {
     min-width: auto;
     max-width: none;
   }
+
+  body > footer br {
+    display: none;
+  }
 }
 
 @media (min-width: 992px) {
   :root {
     
+  }
+
+  details summary:after {
+    float: left;
+  }
+
+  details summary span {
+    padding-left: var(--spacing);
   }
 
   nav br {
