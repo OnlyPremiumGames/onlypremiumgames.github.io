@@ -44,6 +44,7 @@
     </header>
 
     <main class="container">
+        
         <h2>About</h2>
         <article id="about">
             <p>
@@ -80,7 +81,7 @@
 
         <div x-data="{ games: [] }" x-init="games = await (await fetch('/data/top.json')).json();">
             <h2>Personal Top</h2>
-            <article id="top">
+            <article id="top" class="reverse list">
                 <template x-if="games.length > 0">
                     <ul>
                         <template x-for="game in games">
@@ -99,6 +100,8 @@
                 </template>
             </article>
         </div>
+
+    </main>
 
     <footer class="container">
         Built with
