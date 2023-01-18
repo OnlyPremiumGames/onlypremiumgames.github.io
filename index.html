@@ -83,13 +83,12 @@
                                     </a>
                                     <hgroup class="space">
                                         <h3>
-                                            <span x-html="games[game_index].id + '.'"></span>
                                             <a x-bind:href="games[game_index].link" target="_blank">
-                                                <span x-html="games[game_index].title"></span>
+                                                <span x-html="games[game_index].id + '. ' + games[game_index].title"></span>
                                             </a>
                                         </h3>
                                         <h5>
-                                            <span x-text="games[game_index].date"></span>
+                                            <span x-text="'Finished: ' + games[game_index].date"></span>
                                         </h5>
                                     </hgroup>
                                 </header>
