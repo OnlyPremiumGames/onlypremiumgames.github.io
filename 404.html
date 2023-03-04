@@ -7,7 +7,6 @@
     <title>Only Premium Games</title>
     <link rel="stylesheet" href="css/pico.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/pinecone-router@2.x.x/dist/router.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
     <script defer src="js/init-theme.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,12 +15,6 @@
 </head>
 
 <body>
-    <template x-route="/finished/:id"></template>
-
-    <template x-if="$router.route == '/finished/:id'">
-        <div>ID: <span x-text="$router.params.id"></span></div>
-    </template>
-
     <header class="container">
         <nav>
             <ul class="logo">
