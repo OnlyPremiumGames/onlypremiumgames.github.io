@@ -19,7 +19,7 @@
         <nav>
             <ul class="logo">
                 <li>
-                    <a href="index.html">
+                    <a href="/index.html">
                         <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 270 270" width="100%" height="100%" fill="currentColor" stroke="none" stroke-width="0" xmlns="http://www.w3.org/2000/svg">
                             <polygon points="0,0 150,0 150,61 120,61 120,30 30,30 30,120 61,120 61,150 0,150"/>
                             <polygon points="60,210 60,60 210,60 210,150 90,150 90,120 180,120 180,90 90,90 90,210"/>
@@ -34,7 +34,7 @@
             </ul>
             <ul class="links">
                 <li>
-                    <a href="index.html"><strong>Home</strong></a>
+                    <a href="/index.html"><strong>Home</strong></a>
                 </li>
                 <li>
                     <a href="#" class="theme" data-theme-toggler="dark"><strong>Theme</strong></a>
@@ -49,8 +49,8 @@
         <article id="about">
             <p>
                 Hello, my name is <a rel="me" href="https://mstdn.games/@maek" target="_blank"><strong>Ma(r)ek</strong></a>,
-                I'm from Slovakia and I play <a href="index.html" target="_blank"><strong>only premium games</strong></a>
-                on my iPhone and iPad. After finishing more than <a href="list.html" target="_blank"><strong>300</strong></a>
+                I'm from Slovakia and I play <a href="/index.html" target="_blank"><strong>only premium games</strong></a>
+                on my iPhone and iPad. After finishing more than <a href="/list.html" target="_blank"><strong>300</strong></a>
                 of them I realized that someone might find it helpful to read some quick thoughts on these games.<br><br>
                 By finishing I mean that I either saw the "thanks for playing" screen or the credits roll.<br><br>
                 By premium I mean games for which I pay upfornt money and I get the whole experience.
@@ -87,7 +87,7 @@
                         <template x-for="game in games">
                             <li>
                                 <a x-bind:href="game.link" class="image" target="_blank">
-                                    <img x-bind:src="'img/t' + game.id + '.webp'">
+                                    <img x-bind:src="'/img/t' + game.id + '.webp'">
                                 </a>
                                 <h3 class="space">
                                     <a x-bind:href="game.link" target="_blank">
@@ -109,7 +109,7 @@
         by <a rel="me" href="https://mstdn.games/@maek">Ma(r)ek Toth</a>.
     </footer>
 
-    <script src="js/toggle-theme.js"></script>
+    <script src="/js/toggle-theme.js"></script>
 
 </body>
 
