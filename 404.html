@@ -31,7 +31,7 @@
         function router() {
             return {
                 finished(context) {
-                    localStorage.setItem('finished-param', context.params.finished);
+                    localStorage.setItem('finished-param', context.params.id);
                 },
             };
         }
