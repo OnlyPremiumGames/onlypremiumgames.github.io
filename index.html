@@ -7,6 +7,7 @@
     <title>Only Premium Games</title>
     <link rel="stylesheet" href="/css/pico.min.css" />
     <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/pinecone-router@2.x.x/dist/router.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
     <script defer src="/js/init-theme.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,6 +16,27 @@
 </head>
 
 <body>
+    <div x-data="router()">
+        <!-- You can pass in a function name 
+        <template x-route="/" x-handler="home"></template>-->
+        <!-- Or an anonymous/arrow function 
+        <template x-route="/home" x-handler="(ctx) => ctx.redirect('/')"></template>-->
+        <!-- Or even an array of multiple function names/anonymous functions! -->
+        <template x-route="/finished/:id" x-handler="finished"></template>
+        <!-- 404 handler 
+        <template x-route="notfound" x-handler="notfound"></template>-->
+    </div>
+
+    <script>
+        function router() {
+            return {
+                finished(context) {
+                    localStorage.setItem('finished-param', context.params.finished);
+                },
+            };
+        }
+    </script>
+
     <header class="container">
         <nav>
             <ul class="logo">
