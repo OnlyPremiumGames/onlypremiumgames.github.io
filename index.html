@@ -5,205 +5,131 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Only Premium Games</title>
-    <link rel="stylesheet" href="/css/pico.min.css" />
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/pinecone-router@2.x.x/dist/router.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Geo">
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+
+    <!-- Milligram CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+
     <script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
     <script defer src="/js/init-theme.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geo&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div x-data="router()">
-        <!-- You can pass in a function name 
-        <template x-route="/" x-handler="home"></template>-->
-        <!-- Or an anonymous/arrow function 
-        <template x-route="/home" x-handler="(ctx) => ctx.redirect('/')"></template>-->
-        <!-- Or even an array of multiple function names/anonymous functions! -->
-        <template x-route="/finished/:id" x-handler="finished"></template>
-        <!-- 404 handler 
-        <template x-route="notfound" x-handler="notfound"></template>-->
-    </div>
-
-    <script>
-        function router() {
-            return {
-                finished(context) {
-                    localStorage.setItem('finished-param', context.params.finished);
-                },
-            };
-        }
-    </script>
-
-    <header class="container">
-        <nav>
-            <ul class="logo">
-                <li>
-                    <a href="/index.html">
-                        <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 270 270" width="100%" height="100%" fill="currentColor" stroke="none" stroke-width="0" xmlns="http://www.w3.org/2000/svg">
-                            <polygon points="0,0 150,0 150,61 120,61 120,30 30,30 30,120 61,120 61,150 0,150"/>
-                            <polygon points="60,210 60,60 210,60 210,150 90,150 90,120 180,120 180,90 90,90 90,210"/>
-                            <polygon points="120,149 120,270 270,270 270,180 180,180 180,210 240,210 240,240 150,240 150,149"/>
-                            <polygon points="209,120 270,120 270,150 209,150"/>
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <span class="gfont"><strong>Only <br>Premium <br>Games</strong></span>
-                </li>
-            </ul>
-            <ul class="links">
-                <li>
-                    <a href="/about.html"><strong>About</strong></a>
-                </li>
-                <li>
-                    <a href="#" class="theme" data-theme-toggler="dark"><strong>Theme</strong></a>
-                </li>
-            </ul>
-        </nav>
+    <header>
+        <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 270 270" width="100%" height="100%"
+            fill="currentColor" stroke="none" stroke-width="0" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="0,0 150,0 150,61 120,61 120,30 30,30 30,120 61,120 61,150 0,150" />
+            <polygon points="60,210 60,60 210,60 210,150 90,150 90,120 180,120 180,90 90,90 90,210" />
+            <polygon points="120,149 120,270 270,270 270,180 180,180 180,210 240,210 240,240 150,240 150,149" />
+            <polygon points="209,120 270,120 270,150 209,150" />
+        </svg>
+        <h2>Only Premium Games</h2>
     </header>
 
     <main class="container">
+        
+        <h3>About</h3>
+        <p>
+            Hello, my name is Ma(r)ek, I'm from Slovakia and I play only premium games on my iPhone and iPad.
+            After finishing a few I started my private list. After finishing more 300 I decided to share my list
+            online. By finishing I mean that I either saw the "thanks for playing" screen or the credits roll.
+            By premium I mean games for which I pay upfornt money and I get the whole experience. I'm also OK
+            with trying games for free and then paying to unlock content. I consider games on subscription
+            services like Apple Arcade or Netflix premium, too. But, I avoid games containing purchases for ads
+            removal or games with double currencies. There are some exceptions in my list, but those all have
+            their own reasons.
+        </p>
 
+        <h3>Playing</h3>
         <div x-data="{ games: [] }" x-init="games = await (await fetch('/data/playing.json')).json();">
-            <h2>Playing Now</h2>
-            <article id="playing" class="list">
-                <template x-if="games.length > 0">
-                    <ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>Title</th>
+                        <th>Date Started</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template x-if="games.length > 0">
                         <template x-for="game in games">
-                            <li>
-                                <a x-bind:href="game.link" class="image" target="_blank">
-                                    <img x-bind:src="'/img/p' + game.id + '.webp'">
-                                </a>
-                                <h3 class="space">
+                            <tr>
+                                <td><span x-html="game.id"></span></td>
+                                <td>
                                     <a x-bind:href="game.link" target="_blank">
                                         <span x-html="game.title"></span>
                                     </a>
-                                </h3>
-                            </li>
+                                </td>
+                                <td><span x-html="game.date"></span></td>
+                            </tr>
                         </template>
-                    </ul>
-                </template>
-            </article>
+                    </template>
+                </tbody>
+            </table>
         </div>
 
-        <div x-data="{ games: [], count: 3 }" x-init="games = await (await fetch('/data/completed.json')).json();">
-            <h2>Finished Games</h2>
-            <template x-if="games.length > 0">
-                <template x-for="(game, game_index) in count">
-                    <div>
-                        <template x-if="games[game_index].id == 310">
-                            <h2>No more thoughts from here on. Just a plain list to keep track for myself ...</h2>
+        <h3>Finished</h3>
+        <div x-data="{ games: [] }" x-init="games = await (await fetch('/data/finished.json')).json();">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>Title</th>
+                        <th>Date Finished</th>
+                        <th>My Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template x-if="games.length > 0">
+                        <template x-for="game in games">
+                            <tr>
+                                <td><span x-html="game.id"></span></td>
+                                
+                                <template x-if="game.link">
+                                    <td>
+                                        <a x-bind:href="game.link" target="_blank">
+                                            <span x-html="game.title"></span>
+                                        </a>
+                                    </td>
+                                </template>
+                                <template x-if="!game.link">
+                                    <td><span x-html="game.title"></span></td>
+                                </template>
+
+                                <template x-if="game.date">
+                                    <td><span x-html="game.date"></span></td>
+                                </template>
+                                <template x-if="!game.date">
+                                    <td>-</td>
+                                </template>
+
+                                <template x-if="game.rating">
+                                    <td><span x-html="game.rating"></span></td>
+                                </template>
+                                <template x-if="!game.rating">
+                                    <td>-</td>
+                                </template>
+                            </tr>
                         </template>
-                        <article x-bind:id="games[game_index].id">
-                            <template x-if="games[game_index].link">
-                                <header>
-                                    <a x-bind:href="games[game_index].link" class="image" target="_blank">
-                                        <img x-bind:src="'/img/' + games[game_index].id + '.webp'">
-                                    </a>
-                                    <hgroup class="space">
-                                        <h3>
-                                            <a x-bind:href="games[game_index].link" target="_blank">
-                                                <span x-html="games[game_index].id + '. ' + games[game_index].title"></span>
-                                            </a>
-                                        </h3>
-                                        <h5>
-                                            <span x-text="'Finished: ' + games[game_index].date"></span>
-                                        </h5>
-                                    </hgroup>
-                                </header>
-                            </template>
-        
-                            <!-- Titles and dates for old games are displayed in the body of the article. -->
-                            <template x-if="!games[game_index].link">
-                                <hgroup>
-                                    <h3>
-                                        <span x-html="games[game_index].id + '.'"></span>
-                                        <span x-html="games[game_index].title"></span>
-                                    </h3>
-                                    <h5>
-                                        <template x-if="games[game_index].date">
-                                            <span x-text="games[game_index].date"></span>
-                                        </template>
-                                    </h5>
-                                </hgroup>
-                            </template>
-        
-                            <template x-if="games[game_index].pros && games[game_index].cons">
-                                <div class="grid">
-                                    <div>
-                                        <details open>
-                                            <summary><span>Pros</span></summary>
-                                            <ul>
-                                                <template x-if="games[game_index].pros.length > 0">
-                                                    <template x-for="pro in games[game_index].pros">
-                                                        <li class="pro">
-                                                            <span x-text="pro"></span>
-                                                        </li>
-                                                    </template>
-                                                </template>
-                                            </ul>
-                                        </details>
-                                    </div>
-                                    <div>
-                                        <details open>
-                                            <summary><span>Cons</span></summary>
-                                            <ul>
-                                                <template x-if="games[game_index].cons.length > 0">
-                                                    <template x-for="con in games[game_index].cons">
-                                                        <li class="con">
-                                                            <span x-text="con"></span>
-                                                        </li>
-                                                    </template>
-                                                </template>
-                                            </ul>
-                                        </details>
-                                    </div>
-                                </div>
-                            </template>
-        
-                            <template x-if="games[game_index].verdict && games[game_index].rating">
-                                <footer>
-                                    <hgroup>
-                                        <h3>Verdict</h3>
-                                        <h4>
-                                            <span x-text="games[game_index].verdict"></span>
-                                        </h4>
-                                    </hgroup>
-                                    <div class="center">
-                                        <svg role="img" viewBox="0 0 260 48" width="50%" height="50%" xmlns="http://www.w3.org/2000/svg">
-                                            <path id="star" d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z" />
-                                            <use href="#star" x="0" fill="currentColor" stroke="currentColor" />
-                                            <use href="#star" x="52" x-bind:fill="games[game_index].rating > 1 ? 'currentColor' : 'none'" stroke="currentColor" />
-                                            <use href="#star" x="104" x-bind:fill="games[game_index].rating > 2 ? 'currentColor' : 'none'" stroke="currentColor" />
-                                            <use href="#star" x="156" x-bind:fill="games[game_index].rating > 3 ? 'currentColor' : 'none'" stroke="currentColor" />
-                                            <use href="#star" x="208" x-bind:fill="games[game_index].rating > 4 ? 'currentColor' : 'none'" stroke="currentColor" />
-                                        </svg>
-                                    </div>
-                                </footer>
-                            </template>
-                        </article>
-                    </div>
-            </template>
-        </template>
-            <div class="center buttons">
-                <div x-show="count != games.length">
-                    <button class="secondary" x-on:click="count + 3 > games.length ? count = games.length : count += 3">Load more ...</button>
-                </div>
-            </div>
+                    </template>
+                </tbody>
+            </table>
         </div>
 
     </main>
 
-    <footer class="container">
-        Built with <a href="https://picocss.com" target="_blank">Pico.css</a>
+    <footer>
+        Built with <a href="https://milligram.io" target="_blank">Milligram</a>
         and <a href="https://alpinejs.dev" target="_blank">Alpine.js</a>
-        by <a rel="me" href="https://mstdn.games/@maek">Ma(r)ek Toth</a>.
+        by Ma(r)ek Toth.
     </footer>
-
-    <script src="/js/toggle-theme.js"></script>
 
 </body>
 

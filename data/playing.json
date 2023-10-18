@@ -2,21 +2,25 @@
   {
     "id": 1,
     "title": "Figment: Journey Into the Mind",
-    "link": "https://apps.apple.com/us/app/figment-journey-into-the-mind/id1454799373"
+    "link": "https://apps.apple.com/us/app/figment-journey-into-the-mind/id1454799373",
+    "date": "2023-10-18"
   },
   {
     "id": 2,
     "title": "Huntdown",
-    "link": "https://apps.apple.com/us/app/huntdown/id1198183067"
+    "link": "https://apps.apple.com/us/app/huntdown/id1198183067",
+    "date": "2023-10-17"
   },
   {
     "id": 3,
     "title": "The Chronos Principle",
-    "link": "https://apps.apple.com/us/app/the-chronos-principle/id1551295225"
+    "link": "https://apps.apple.com/us/app/the-chronos-principle/id1551295225",
+    "date": "2023-10-16"
   },
   {
     "id": 4,
     "title": "Wordsmyth - A Daily Word Game",
-    "link": "https://apps.apple.com/us/app/wordsmyth-a-daily-word-game/id1534959553"
+    "link": "https://apps.apple.com/us/app/wordsmyth-a-daily-word-game/id1534959553",
+    "date": "2023-10-15"
   }
 ]
