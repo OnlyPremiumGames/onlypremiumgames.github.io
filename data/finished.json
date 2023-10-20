@@ -1,5 +1,306 @@
 [
   {
+    "id": 364,
+    "title": "Rayman Mini",
+    "link": "https://apps.apple.com/us/app/rayman-mini/id1469537876",
+    "date": "2023-10-12",
+    "rating": "*****"
+  },
+  {
+    "id": 363,
+    "title": "The Top Hat Club",
+    "link": "https://apps.apple.com/us/app/the-top-hat-club/id6446816081",
+    "date": "2023-09-30",
+    "rating": "***"
+  },
+  {
+    "id": 362,
+    "title": "Grimvalor",
+    "link": "https://apps.apple.com/de/app/grimvalor/id1369179088",
+    "date": "2023-09-29",
+    "rating": "*****"
+  },
+  {
+    "id": 361,
+    "title": "KAMI 2",
+    "link": "https://apps.apple.com/us/app/kami-2/id1133161444",
+    "date": "2023-09-26",
+    "rating": "***"
+  },
+  {
+    "id": 360,
+    "title": "Gibbon: Beyond the Trees",
+    "link": "https://apps.apple.com/us/app/gibbon-beyond-the-trees/id1482634476",
+    "date": "2023-09-09",
+    "rating": "****"
+  },
+  {
+    "id": 359,
+    "title": "South of the Circle",
+    "link": "https://apps.apple.com/us/app/south-of-the-circle/id6467118268",
+    "date": "2023-09-08",
+    "rating": "***"
+  },
+  {
+    "id": 358,
+    "title": "Heroki",
+    "link": "https://apps.apple.com/us/app/heroki/id883602033",
+    "date": "2023-09-03",
+    "rating": "***"
+  },
+  {
+    "id": 357,
+    "title": "Luminaria: Forgotten Echoes",
+    "link": "https://apps.apple.com/us/app/luminaria-forgotten-echoes/id6450426520",
+    "date": "2023-09-02",
+    "rating": "***"
+  },
+  {
+    "id": 356,
+    "title": "Sonic Runners Adventure",
+    "link": "https://apps.apple.com/us/app/sonic-runners-adventure/id1306844643",
+    "date": "2023-08-29",
+    "rating": "****"
+  },
+  {
+    "id": 355,
+    "title": "Jetpack Joyride 2",
+    "link": "https://apps.apple.com/us/app/jetpack-joyride-2/id1598096399",
+    "date": "2023-08-11",
+    "rating": "****"
+  },
+  {
+    "id": 354,
+    "title": "Teslagrad",
+    "link": "https://apps.apple.com/us/app/teslagrad/id1374372468",
+    "date": "2023-08-04",
+    "rating": "***"
+  },
+  {
+    "id": 353,
+    "title": "Super Meat Boy Forever",
+    "link": "https://apps.apple.com/us/app/super-meat-boy-forever/id1617800007",
+    "date": "2023-07-28",
+    "rating": "*****"
+  },
+  {
+    "id": 352,
+    "title": "The Pathless",
+    "link": "https://apps.apple.com/us/app/the-pathless/id1441675155",
+    "date": "2023-07-20",
+    "rating": "*****"
+  },
+  {
+    "id": 351,
+    "title": "The Gardens Between",
+    "link": "https://apps.apple.com/us/app/the-gardens-between/id1371965583",
+    "date": "2023-07-06",
+    "rating": "****"
+  },
+  {
+    "id": 350,
+    "title": "Mutazione",
+    "link": "https://apps.apple.com/us/app/mutazione/id1466920014",
+    "date": "2023-07-04",
+    "rating": "****"
+  },
+  {
+    "id": 349,
+    "title": "Diablo Immortal",
+    "link": "https://apps.apple.com/us/app/diablo-immortal/id1492005122",
+    "date": "2023-06-22",
+    "rating": "****"
+  },
+  {
+    "id": 348,
+    "title": "Super Mario Run",
+    "link": "https://apps.apple.com/us/app/super-mario-run/id1145275343",
+    "date": "2023-05-12",
+    "rating": "***"
+  },
+  {
+    "id": 347,
+    "title": "Pawnbarian",
+    "link": "https://apps.apple.com/us/app/pawnbarian/id1510583444",
+    "date": "2023-05-08",
+    "rating": "****"
+  },
+  {
+    "id": 346,
+    "title": "Streets of Rage 4",
+    "link": "https://apps.apple.com/us/app/streets-of-rage-4/id1601446687",
+    "date": "2023-03-28",
+    "rating": "*****"
+  },
+  {
+    "id": 345,
+    "title": "CHUCHEL",
+    "link": "https://apps.apple.com/us/app/chuchel/id1296646396",
+    "date": "2023-03-11",
+    "rating": "***"
+  },
+  {
+    "id": 344,
+    "title": "OXENFREE: Netflix Edition",
+    "link": "https://apps.apple.com/us/app/oxenfree-netflix-edition/id1613438096",
+    "date": "2023-03-09",
+    "rating": "*****"
+  },
+  {
+    "id": 343,
+    "title": "The Mooseman",
+    "link": "https://apps.apple.com/us/app/the-mooseman/id1342785388",
+    "date": "2023-03-03",
+    "rating": "***"
+  },
+  {
+    "id": 342,
+    "title": "Behind the Frame",
+    "link": "https://apps.apple.com/us/app/behind-the-frame/id1571194454",
+    "date": "2023-02-25",
+    "rating": "*****"
+  },
+  {
+    "id": 341,
+    "title": "TMNT: Shredder's Revenge",
+    "link": "https://apps.apple.com/us/app/tmnt-shredders-revenge/id6443475072",
+    "date": "2023-02-18",
+    "rating": "*****"
+  },
+  {
+    "id": 340,
+    "title": "Automatoys",
+    "link": "https://apps.apple.com/us/app/automatoys/id1580281448",
+    "date": "2023-02-13",
+    "rating": "****"
+  },
+  {
+    "id": 339,
+    "title": "Lucky Luna",
+    "link": "https://apps.apple.com/us/app/lucky-luna/id1609150630",
+    "date": "2023-01-29",
+    "rating": "***"
+  },
+  {
+    "id": 338,
+    "title": "Huntdown",
+    "link": "https://apps.apple.com/us/app/huntdown/id1198183067",
+    "date": "2022-12-30",
+    "rating": "*****"
+  },
+  {
+    "id": 337,
+    "title": "Samorost 2",
+    "link": "https://apps.apple.com/us/app/samorost-2/id1506973111",
+    "date": "2022-12-19",
+    "rating": "****"
+  },
+  {
+    "id": 336,
+    "title": "Skies of Chaos",
+    "link": "https://apps.apple.com/us/app/skies-of-chaos/id1612698180",
+    "date": "2022-12-18",
+    "rating": "*****"
+  },
+  {
+    "id": 335,
+    "title": "Samorost 1",
+    "link": "https://apps.apple.com/us/app/samorost-1/id1561324007",
+    "date": "2022-12-18",
+    "rating": "****"
+  },
+  {
+    "id": 334,
+    "title": "Reigns: Her Majesty",
+    "link": "https://apps.apple.com/us/app/reigns-her-majesty/id1171040772",
+    "date": "2022-12-12",
+    "rating": "***"
+  },
+  {
+    "id": 333,
+    "title": "Jade Order",
+    "link": "https://apps.apple.com/us/app/jade-order/id1630008883",
+    "date": "2022-11-19",
+    "rating": "****"
+  },
+  {
+    "id": 332,
+    "title": "Loop The Game",
+    "link": "https://apps.apple.com/us/app/loop-the-game/id1621853947",
+    "date": "2022-11-12",
+    "rating": "***"
+  },
+  {
+    "id": 331,
+    "title": "EverCrawl - Pixelart Roguelite",
+    "link": "https://apps.apple.com/us/app/evercrawl-pixelart-roguelite/id1642146866",
+    "date": "2022-11-01",
+    "rating": "***"
+  },
+  {
+    "id": 330,
+    "title": "Relic Hunters: Rebels",
+    "link": "https://apps.apple.com/us/app/relic-hunters-rebels/id1605236950",
+    "date": "2022-10-04",
+    "rating": "****"
+  },
+  {
+    "id": 329,
+    "title": "Juicy Realm",
+    "link": "https://apps.apple.com/us/app/juicy-realm/id1453808408",
+    "date": "2022-08-19",
+    "rating": "***"
+  },
+  {
+    "id": 328,
+    "title": "Path of Giants",
+    "link": "https://apps.apple.com/us/app/path-of-giants/id1475781647",
+    "date": "2022-08-18",
+    "rating": "***"
+  },
+  {
+    "id": 327,
+    "title": "Into the Breach",
+    "link": "https://apps.apple.com/us/app/into-the-breach/id1616542180",
+    "date": "2022-08-12",
+    "rating": "*****"
+  },
+  {
+    "id": 326,
+    "title": "Moncage",
+    "link": "https://apps.apple.com/us/app/moncage/id1587860402",
+    "date": "2022-07-31",
+    "rating": "**"
+  },
+  {
+    "id": 325,
+    "title": "HOOK 2",
+    "link": "https://apps.apple.com/us/app/hook-2/id1595687061",
+    "date": "2022-07-26",
+    "rating": "****"
+  },
+  {
+    "id": 324,
+    "title": "Book of Demons: Tablet Edition",
+    "link": "https://apps.apple.com/us/app/book-of-demons-tablet-edition/id1491139385",
+    "date": "2022-06-27",
+    "rating": "****"
+  },
+  {
+    "id": 323,
+    "title": "The Chronos Principle",
+    "link": "https://apps.apple.com/us/app/the-chronos-principle/id1551295225",
+    "date": "2022-05-24",
+    "rating": "****"
+  },
+  {
+    "id": 322,
+    "title": "Figment: Journey Into the Mind",
+    "link": "https://apps.apple.com/us/app/figment-journey-into-the-mind/id1454799373",
+    "date": "2022-05-16",
+    "rating": "****"
+  },
+  {
     "id": 321,
     "title": "The First Tree",
     "link": "https://apps.apple.com/us/app/the-first-tree/id1524841987",

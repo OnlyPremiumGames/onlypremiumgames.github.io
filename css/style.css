@@ -1,10 +1,16 @@
+:root {
+  --color: #f1c40f;
+}
+
 body > header {
+  padding-top: 1rem;
   text-align: center;
 }
 
 header > svg {
   max-width: 270px;
   max-height: 270px;
+  color: var(--color);
 }
 
 header > h2 {
@@ -18,13 +24,26 @@ body > main {
 }
 
 td > a {
-  color: #606c76;
+  color: var(--color);
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+}
+
+.button-color {
+  color: var(--color);
+  border-color: var(--color);
+  background-color: transparent;
 }
 
 body > footer {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
   text-align: center;
 }
 
 footer > a {
-  color: #606c76;
+  color: var(--color);
 }
