@@ -1,2 +1,2 @@
 # onlypremiumgames.github.io
-Only Premium.Games
+Only Premium Games

@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="Only Premium Games" />
+    <meta property="og:image" content="https://onlypremium.games/img/logo.png" />
     <title>Only Premium Games</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Geo" />
@@ -45,16 +47,14 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Number</th>
                         <th>Title</th>
-                        <th>Date Started</th>
+                        <th>Started</th>
                     </tr>
                 </thead>
                 <tbody>
                     <template x-if="games.length > 0">
                         <template x-for="game in games">
                             <tr>
-                                <td><span x-html="game.id"></span></td>
                                 <td>
                                     <a x-bind:href="game.link" target="_blank">
                                         <span x-html="game.title"></span>
@@ -75,8 +75,8 @@
                     <tr>
                         <th>Number</th>
                         <th>Title</th>
-                        <th>Date Finished</th>
-                        <th>My Rating</th>
+                        <th>Finished</th>
+                        <th>Rating</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -126,7 +126,7 @@
     <footer>
         Built with <a href="https://milligram.io" target="_blank">Milligram</a>
         and <a href="https://alpinejs.dev" target="_blank">Alpine.js</a>
-        by Ma(r)ek Toth.
+        by Ma(r)ek Toth
     </footer>
 
 </body>
