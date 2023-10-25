@@ -23,6 +23,10 @@ body > main {
   justify-content: center;
 }
 
+h3 {
+  margin-top: 4rem;
+}
+
 td > a {
   color: var(--color);
 }
