@@ -40,34 +40,6 @@
             my list, but those all have their own reasons.
         </p>
 
-        <!--
-        <h3>Playing</h3>
-        <div x-data="{ games: [] }" x-init="games = await (await fetch('/data/playing.json')).json();">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Started</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <template x-if="games.length > 0">
-                        <template x-for="game in games">
-                            <tr>
-                                <td>
-                                    <a x-bind:href="game.link" target="_blank">
-                                        <span x-html="game.title"></span>
-                                    </a>
-                                </td>
-                                <td><span x-html="convertDate(game.date)"></span></td>
-                            </tr>
-                        </template>
-                    </template>
-                </tbody>
-            </table>
-        </div>
-        -->
-
         <h3>List</h3>
         <div x-data="{ games: [], count: 30 }" x-init="games = await (await fetch('/data/finished.json')).json();">
             <table>
