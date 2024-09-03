@@ -1,18 +1,18 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta property="og:title" content="Only Premium Games" />
-    <meta property="og:image" content="https://onlypremium.games/img/logo.png" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Only Premium Games">
+    <meta property="og:image" content="https://onlypremium.games/img/logo.png">
     <title>Only Premium Games</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Geo" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Geo">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
 <body>
@@ -56,7 +56,7 @@
                         <template x-for="(game, game_index) in count">
                             <tr>
                                 <td><span x-html="games[game_index].id"></span></td>
-        
+                        
                                 <template x-if="games[game_index].link">
                                     <td>
                                         <a x-bind:href="games[game_index].link" target="_blank">
@@ -67,14 +67,14 @@
                                 <template x-if="!games[game_index].link">
                                     <td><span x-html="games[game_index].title"></span></td>
                                 </template>
-        
+                        
                                 <template x-if="games[game_index].date">
                                     <td><span x-html="convertDate(games[game_index].date)"></span></td>
                                 </template>
                                 <template x-if="!games[game_index].date">
                                     <td>-</td>
                                 </template>
-        
+                        
                                 <template x-if="games[game_index].rating">
                                     <td><span x-html="games[game_index].rating"></span></td>
                                 </template>
