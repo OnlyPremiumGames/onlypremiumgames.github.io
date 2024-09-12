@@ -55,31 +55,52 @@
                     <template x-if="games.length > 0">
                         <template x-for="(game, game_index) in count">
                             <tr>
-                                <td><span x-html="games[game_index].id"></span></td>
+                                <td class="number"><span x-html="games[game_index].id"></span></td>
                         
                                 <template x-if="games[game_index].link">
-                                    <td>
+                                    <td class="info">
                                         <a x-bind:href="games[game_index].link" target="_blank">
                                             <span x-html="games[game_index].title"></span>
                                         </a>
+                                        <!-- <div class="comment">This is a looooong looooong looooong looooong looooong looooong looooong looooong looooong looooong looooong looooong looooong looooong looooong looooong description of Game #<span x-html="games[game_index].id"></span></div> -->
                                     </td>
                                 </template>
                                 <template x-if="!games[game_index].link">
-                                    <td><span x-html="games[game_index].title"></span></td>
+                                    <td class="info">
+                                      <span x-html="games[game_index].title"></span>
+                                      <!-- <div class="comment">This is a looooong looooong looooong looooong looooong looooong looooong looooong looooong looooong looooong looooong looooong looooong looooong looooong description of Game #<span x-html="games[game_index].id"></span></div> -->
+                                    </td>
                                 </template>
                         
                                 <template x-if="games[game_index].date">
-                                    <td><span x-html="convertDate(games[game_index].date)"></span></td>
+                                    <td class="finished"><span x-html="convertDate(games[game_index].date)"></span></td>
                                 </template>
                                 <template x-if="!games[game_index].date">
-                                    <td>-</td>
+                                    <td class="finished">-</td>
                                 </template>
                         
-                                <template x-if="games[game_index].rating">
-                                    <td><span x-html="games[game_index].rating"></span></td>
+                                <template x-if="games[game_index].rating" x-data="{ length: games[game_index].rating.length }">
+                                    <td class="rating">
+                                      <template x-for="i in 5">
+                                        <span>
+                                          <template x-if="i <= length"><span>&#9733;</span></template>
+                                          <template x-if="i > length"><span>&#9734;</span></template>
+                                        </span>
+                                      </template>
+                                    </td>
+                                    <!-- <td>
+                                      <template x-for="i in length">
+                                        <span>&#9733;</span>
+                                      </template>
+                                    </td> -->
+                                    <!-- <td>
+                                      <template x-for="i in length" x-data="{ rating: 'rating-' + games[game_index].rating.length }">
+                                        <span x-bind:class="rating">&#9733;</span>
+                                      </template>
+                                    </td> -->
                                 </template>
                                 <template x-if="!games[game_index].rating">
-                                    <td>-</td>
+                                    <td class="rating">-</td>
                                 </template>
                             </tr>
                         </template>

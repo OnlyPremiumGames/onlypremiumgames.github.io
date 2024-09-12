@@ -1,5 +1,10 @@
 :root {
   --color: #0066ff;
+  --rating-1-color: #B869AA;
+  --rating-2-color: #E668A7;
+  --rating-3-color: #EF4A51;
+  --rating-4-color: #F68C4E;
+  --rating-5-color: #ADD038;
 }
 
 body > header {
@@ -31,8 +36,58 @@ div > table {
   display: table;
 }
 
+td.number {
+  /* width: 5%; */
+}
+
+td.info {
+  /* width: 100%;
+  min-width: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; */
+}
+
+td.finished {
+  /* width: 10%; */
+}
+
+td.rating {
+  /* width: 15%; */
+  white-space: nowrap;
+}
+
 td > a {
   color: var(--color);
+}
+
+td div.comment {
+  font-size: 0.875em;
+  /* width: 100%;
+  min-width: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; */
+}
+
+td span.rating-1 {
+  color: var(--rating-1-color);
+}
+
+td span.rating-2 {
+  color: var(--rating-2-color);
+}
+
+td span.rating-3 {
+  color: var(--rating-3-color);
+}
+
+td span.rating-4 {
+  color: var(--rating-4-color);
+}
+
+td span.rating-5 {
+  color: var(--rating-5-color);
 }
 
 .centered {
