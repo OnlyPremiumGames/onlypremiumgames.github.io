@@ -2,111 +2,141 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="Only Premium Games">
-    <meta property="og:image" content="https://onlypremium.games/img/logo.png">
-    <title>Only Premium Games</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Geo">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Only Premium Games">
+  <meta property="og:image" content="https://onlypremium.games/img/logo.png">
+  <title>Only Premium Games</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Geo">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
 <body>
-    <header>
-        <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 270 270" width="100%" height="100%"
-            stroke="none" stroke-width="0" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="0,0 150,0 150,120 120,120 120,30 30,30 30,120 150,120 150,150 0,150" fill="#00aaff"/>
-            <polygon points="60,60 210,60 210,150 90,150 90,120 180,120 180,90 90,90 90,210 60,210" fill="#0088ff"/>
-            <polygon points="120,120 270,120 270,150 150,150 150,240 240,240 240,210 180,210 180,180 270,180 270,270 120,270" fill="#0066ff"/>
-        </svg>
-        <h2>Only Premium Games</h2>
-    </header>
+  <header>
+    <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 270 270" width="100%" height="100%" stroke="none"
+      stroke-width="0" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,0 150,0 150,120 120,120 120,30 30,30 30,120 150,120 150,150 0,150" fill="#00aaff" />
+      <polygon points="60,60 210,60 210,150 90,150 90,120 180,120 180,90 90,90 90,210 60,210" fill="#0088ff" />
+      <polygon points="120,120 270,120 270,150 150,150 150,240 240,240 240,210 180,210 180,180 270,180 270,270 120,270"
+        fill="#0066ff" />
+    </svg>
+    <h2>Only Premium Games</h2>
+  </header>
 
-    <main class="container">
-        
-        <h3>About</h3>
-        <p>
-            Hello, my name is Ma(r)ek, I'm from Slovakia and I play only premium games on my iPhone and iPad.
-            After finishing a few, I started my private list. After finishing more than 300, I decided to share
-            my list online along with my rating. By finishing, I mean that I either saw the "thanks for playing"
-            screen or the credits roll. By premium, I mean games for which I pay money upfront to get the whole
-            experience. I'm also OK with trying games for free and then paying to unlock content. I consider
-            games on subscription services like Apple Arcade or Netflix premium, too. But I avoid games
-            containing purchases for ad removal or games with double currencies. There are some exceptions in
-            my list, but those all have their own reasons.
-        </p>
+  <main class="container">
+    <div id="device-type">Color</div>
 
-        <h3>List</h3>
-        <div x-data="{ games: [], count: 30 }" x-init="games = await (await fetch('/data/finished.json')).json();">
-            <table>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Title</th>
-                        <th>Finished</th>
-                        <th>Rating</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <template x-if="games.length > 0">
-                        <template x-for="(game, game_index) in count">
-                            <tr>
-                                <td><span x-html="games[game_index].id"></span></td>
-                        
-                                <template x-if="games[game_index].link">
-                                    <td>
-                                        <a x-bind:href="games[game_index].link" target="_blank">
-                                            <span x-html="games[game_index].title"></span>
-                                        </a>
-                                    </td>
-                                </template>
-                                <template x-if="!games[game_index].link">
-                                    <td><span x-html="games[game_index].title"></span></td>
-                                </template>
-                        
-                                <template x-if="games[game_index].date">
-                                    <td><span x-html="convertDate(games[game_index].date)"></span></td>
-                                </template>
-                                <template x-if="!games[game_index].date">
-                                    <td>-</td>
-                                </template>
-                        
-                                <template x-if="games[game_index].rating">
-                                    <td><span x-html="games[game_index].rating"></span></td>
-                                </template>
-                                <template x-if="!games[game_index].rating">
-                                    <td>-</td>
-                                </template>
-                            </tr>
-                        </template>
-                    </template>
-                </tbody>
-            </table>
-            <div class="centered" x-show="count != games.length">
-                <a class="button button-color" x-on:click="count + 30 > games.length ? count = games.length : count += 30">
-                    More ...
-                </a>
-            </div>
-        </div>
+    <h3>About</h3>
+    <p>
+      Hello, my name is Ma(r)ek, I'm from Slovakia and I play only premium games on my iPhone and iPad.
+      After finishing a few, I started my private list. After finishing more than 300, I decided to share
+      my list online along with my rating. By finishing, I mean that I either saw the "thanks for playing"
+      screen or the credits roll. By premium, I mean games for which I pay money upfront to get the whole
+      experience. I'm also OK with trying games for free and then paying to unlock content. I consider
+      games on subscription services like Apple Arcade or Netflix premium, too. But I avoid games
+      containing purchases for ad removal or games with double currencies. There are some exceptions in
+      my list, but those all have their own reasons.
+    </p>
 
-        <script>
-            function convertDate(jsonDate) {
-                    let dateObject = new Date(Date.parse(jsonDate));
-                    return dateObject.toLocaleDateString();
-            }
-        </script>
+    <h3>List</h3>
+    <div
+      x-data="{ games: [], count: 30, isMobile: window.getComputedStyle(document.getElementById('device-type')).getPropertyValue('color') == 'rgb(255, 0, 0)' }"
+      x-init="games = await (await fetch('/data/finished.json')).json();">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th class="date">Finished</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <template x-if="games.length > 0">
+          <template x-for="(game, game_index) in count">
+            <tbody x-data="{ hasComment: games[game_index].hasOwnProperty('comment') }">
+              <tr>
+                <td class="number" x-bind:rowspan="hasComment ? '2' : '1'"><span x-html="games[game_index].id"></span>
+                </td>
 
-    </main>
+                <template x-if="games[game_index].link">
+                  <td class="title" x-bind:class="hasComment ? 'no-border' : ''">
+                    <a x-bind:href="games[game_index].link" target="_blank">
+                      <span x-html="games[game_index].title"></span>
+                    </a>
+                  </td>
+                </template>
+                <template x-if="!games[game_index].link">
+                  <td class="title" x-bind:class="hasComment ? 'no-border' : ''">
+                    <span x-html="games[game_index].title"></span>
+                  </td>
+                </template>
 
-    <footer>
-        Built with <a href="https://milligram.io" target="_blank">Milligram</a>
-        and <a href="https://alpinejs.dev" target="_blank">Alpine.js</a>
-        by Ma(r)ek Toth
-    </footer>
+                <template x-if="games[game_index].date">
+                  <td class="date" x-bind:class="hasComment ? 'no-border' : ''"><span
+                      x-html="convertDate(games[game_index].date)"></span></td>
+                </template>
+                <template x-if="!games[game_index].date">
+                  <td class="date" x-bind:class="hasComment ? 'no-border' : ''">-</td>
+                </template>
+
+                <template x-if="games[game_index].rating"
+                  x-data="{ length: games[game_index].rating.length, rating: 'rating-' + games[game_index].rating.length }">
+                  <td class="rating" x-bind:rowspan="isMobile ? '1' : '2'" x-bind:class="hasComment ? 'no-border' : ''">
+                    <span style="display: table-cell;text-align: center;" x-bind:class="rating">
+                      <template x-for="i in 5">
+                        <span style="white-space: nowrap;">
+                          <template x-if="i <= length"><span>&#9733;</span></template>
+                          <template x-if="i > length"><span>&#9734;</span></template>
+                          <template x-if="(i == 5) && (length > 5)">
+                            <span class="ec"><br />Editor's Choice</span>
+                          </template>
+                        </span>
+                      </template>
+                    </span>
+                  </td>
+                </template>
+                <template x-if="!games[game_index].rating">
+                  <td class="rating" x-bind:rowspan="isMobile ? '1' : '2'" x-bind:class="hasComment ? 'no-border' : ''">
+                    -</td>
+                </template>
+              </tr>
+              <template x-if="hasComment">
+                <tr>
+                  <td class="comment" colspan="2">
+                    <span x-html="games[game_index].comment"></span>
+                  </td>
+                </tr>
+              </template>
+            </tbody>
+          </template>
+        </template>
+        </tbody>
+      </table>
+      <div class="centered" x-show="count != games.length">
+        <a class="button button-color" x-on:click="count + 30 > games.length ? count = games.length : count += 30">
+          More ...
+        </a>
+      </div>
+    </div>
+
+    <script>
+      function convertDate(jsonDate) {
+        let dateObject = new Date(Date.parse(jsonDate));
+        return dateObject.toLocaleDateString();
+      }
+    </script>
+
+  </main>
+
+  <footer>
+    Built with <a href="https://milligram.io" target="_blank">Milligram</a>
+    and <a href="https://alpinejs.dev" target="_blank">Alpine.js</a>
+    by Ma(r)ek Toth
+  </footer>
 
 </body>
 

@@ -1,38 +1,91 @@
 :root {
   --color: #0066ff;
+  --rating-1-color: #B869AA;
+  --rating-2-color: #E668A7;
+  --rating-3-color: #EF4A51;
+  --rating-4-color: #F68C4E;
+  --rating-5-color: #ADD038;
+  --rating-6-color: #FFD700;
 }
 
-body > header {
+body>header {
   padding-top: 1rem;
   text-align: center;
 }
 
-header > svg {
+header>svg {
   max-width: 270px;
   max-height: 270px;
   color: var(--color);
 }
 
-header > h2 {
+header>h2 {
   font-family: 'Geo', sans-serif;
 }
 
-body > main {
+body>main {
   display: block;
   flex-direction: row;
   justify-content: center;
 }
 
-main > h3 {
+#device-type {
+  display: none;
+  color: green;
+}
+
+main>h3 {
   margin-top: 4rem;
 }
 
-div > table {
+div>table {
   display: table;
 }
 
-td > a {
+td.no-border {
+  border-bottom: 0;
+}
+
+td.comment:first-child,
+td.comment:last-child {
+  padding: 1.2rem 1.5rem;
+}
+
+td.number {
+  /* width: 5%; */
+}
+
+td>a {
   color: var(--color);
+}
+
+td.comment,
+td span.ec {
+  font-size: 0.875em;
+}
+
+/* td span.rating-1 {
+  color: var(--rating-1-color);
+}
+
+td span.rating-2 {
+  color: var(--rating-2-color);
+}
+
+td span.rating-3 {
+  color: var(--rating-3-color);
+}
+
+td span.rating-4 {
+  color: var(--rating-4-color);
+}
+
+td span.rating-5 {
+  color: var(--rating-5-color);
+} */
+
+td span.rating-6 {
+  color: var(--rating-6-color);
 }
 
 .centered {
@@ -46,12 +99,24 @@ td > a {
   background-color: transparent;
 }
 
-body > footer {
+body>footer {
   padding-top: 3rem;
   padding-bottom: 1rem;
   text-align: center;
 }
 
-footer > a {
+footer>a {
   color: var(--color);
+}
+
+@media (max-width: 40rem) {
+
+  #device-type {
+    color: red;
+  }
+
+  th.date,
+  td.date {
+    display: none;
+  }
 }
