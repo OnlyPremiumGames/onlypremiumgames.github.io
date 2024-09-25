@@ -1,16 +1,26 @@
 [
   {
+    "id": 390,
+    "title": "Flower",
+    "link": "https://apps.apple.com/us/app/flower/id1279174518",
+    "date": "2024-09-05",
+    "verdict": "A short and sweet classic which holds the test of time very well and the only thing that needs a little getting used to are its controls.",
+    "rating": "****"
+  },
+  {
     "id": 389,
     "title": "Transistor",
     "link": "https://apps.apple.com/us/app/transistor/id948857526",
     "date": "2024-09-02",
-    "rating": "*****"
+    "verdict": "Art, music and gameplay combine to form a masterpiece. Another Supergiant classic which can be recommended without hesitation even 10 years after its orginial release.",
+    "rating": "******"
   },
   {
     "id": 388,
     "title": "Legend of the Skyfish 2",
     "link": "https://apps.apple.com/us/app/legend-of-the-skyfish-2/id6461013693",
     "date": "2024-08-29",
+    "verdict": "Catchy first half of the game transformed into boring and repetetive later half. Still, a worthy successor of a great game.",
     "rating": "***"
   },
   {
@@ -18,6 +28,7 @@
     "title": "Blackwell 4: Deception",
     "link": "about:blank",
     "date": "2024-08-21",
+    "verdict": "Not bad, but hampared by some weird puzzles. Using a door while tied to chair... Really? Worst part of the series, which I hope will peak with its final entry.",
     "rating": "***"
   },
   {
@@ -53,7 +64,7 @@
     "title": "Wildfrost",
     "link": "https://apps.apple.com/us/app/wildfrost/id6462882621",
     "date": "2024-07-05",
-    "rating": "*****"
+    "rating": "******"
   },
   {
     "id": 381,
@@ -102,7 +113,7 @@
     "title": "Spiritfarer: Netflix Edition",
     "link": "https://apps.apple.com/us/app/spiritfarer-netflix-edition/id1610577424",
     "date": "2024-04-18",
-    "rating": "*****"
+    "rating": "******"
   },
   {
     "id": 374,
@@ -151,7 +162,7 @@
     "title": "Superbrothers: Sword & Sworcery",
     "link": "https://apps.apple.com/us/app/superbrothers-sword-sworcery/id424912055",
     "date": "2023-11-20",
-    "rating": "*****"
+    "rating": "******"
   },
   {
     "id": 367,
@@ -375,7 +386,7 @@
     "title": "Skies of Chaos",
     "link": "https://apps.apple.com/us/app/skies-of-chaos/id1612698180",
     "date": "2022-12-18",
-    "rating": "*****"
+    "rating": "******"
   },
   {
     "id": 335,
@@ -438,7 +449,7 @@
     "title": "Into the Breach",
     "link": "https://apps.apple.com/us/app/into-the-breach/id1616542180",
     "date": "2022-08-12",
-    "rating": "*****"
+    "rating": "******"
   },
   {
     "id": 326,
@@ -550,7 +561,7 @@
     "title": "Bleak Sword",
     "link": "https://apps.apple.com/us/app/bleak-sword/id1403554793",
     "date": "2021-11-23",
-    "rating": "*****"
+    "rating": "******"
   },
   {
     "id": 310,

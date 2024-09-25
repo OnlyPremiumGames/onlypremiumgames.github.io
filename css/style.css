@@ -35,6 +35,23 @@ td > a {
   color: var(--color);
 }
 
+td {
+  border-bottom: none;  
+}
+
+td.border {
+  border-bottom: 0.1rem solid #e1e1e1;
+}
+
+td.date {
+  text-align: right;
+}
+
+td.rating {
+  text-align: center;
+  font-size: 200%;
+}
+
 .centered {
   display: flex;
   justify-content: center;

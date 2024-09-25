@@ -32,10 +32,10 @@
         <p>
             Hello, my name is Ma(r)ek, I'm from Slovakia and I play only premium games on my iPhone and iPad.
             After finishing a few, I started my private list. After finishing more than 300, I decided to share
-            my list online along with my rating. By finishing, I mean that I either saw the "thanks for playing"
-            screen or the credits roll. By premium, I mean games for which I pay money upfront to get the whole
-            experience. I'm also OK with trying games for free and then paying to unlock content. I consider
-            games on subscription services like Apple Arcade or Netflix premium, too. But I avoid games
+            my list online along with my rating and thoughts. By finishing, I mean that I either saw the "thanks
+            for playing" screen or the credits roll. By premium, I mean games for which I pay money upfront to
+            get the whole experience. I'm also OK with trying games for free and then paying to unlock content.
+            I consider games on subscription services like Apple Arcade or Netflix premium, too. But I avoid games
             containing purchases for ad removal or games with double currencies. There are some exceptions in
             my list, but those all have their own reasons.
         </p>
@@ -43,20 +43,14 @@
         <h3>List</h3>
         <div x-data="{ games: [], count: 30 }" x-init="games = await (await fetch('/data/finished.json')).json();">
             <table>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Title</th>
-                        <th>Finished</th>
-                        <th>Rating</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <template x-if="games.length > 0">
-                        <template x-for="(game, game_index) in count">
+                <template x-if="games.length > 0">
+                    <template x-for="(game, game_index) in count">
+                        <tbody>
                             <tr>
-                                <td><span x-html="games[game_index].id"></span></td>
-                        
+                                <td>
+                                    <span x-html="games[game_index].id"></span>
+                                </td>
+            
                                 <template x-if="games[game_index].link">
                                     <td>
                                         <a x-bind:href="games[game_index].link" target="_blank">
@@ -65,26 +59,52 @@
                                     </td>
                                 </template>
                                 <template x-if="!games[game_index].link">
-                                    <td><span x-html="games[game_index].title"></span></td>
+                                    <td>
+                                        <span x-html="games[game_index].title"></span>
+                                    </td>
                                 </template>
-                        
+            
                                 <template x-if="games[game_index].date">
-                                    <td><span x-html="convertDate(games[game_index].date)"></span></td>
+                                    <td class="no-border date">
+                                        <span x-html="convertDate(games[game_index].date)"></span>
+                                    </td>
                                 </template>
                                 <template x-if="!games[game_index].date">
                                     <td>-</td>
                                 </template>
-                        
-                                <template x-if="games[game_index].rating">
-                                    <td><span x-html="games[game_index].rating"></span></td>
-                                </template>
-                                <template x-if="!games[game_index].rating">
-                                    <td>-</td>
-                                </template>
                             </tr>
-                        </template>
+                            <template x-if="games[game_index].verdict">
+                                <tr>
+                                    <td></td>
+                                    <td colspan="2">
+                                        <span x-html="games[game_index].verdict"></span>
+                                    </td>
+                                </tr>
+                            </template>
+                            <template x-if="games[game_index].rating" x-data="{ length: games[game_index].rating.length }">
+                                <tr>
+                                    <td></td>
+                                    <td class="rating" colspan="2">
+                                        <template x-if="length <= 5">
+                                            <template x-for="i in 5">
+                                                <span>
+                                                    <template x-if="i <= length"><span>&#9733;</span></template>
+                                                    <template x-if="i > length"><span>&#9734;</span></template>
+                                                </span>
+                                            </template>
+                                        </template>
+                                        <template x-if="length > 5">
+                                            <span style="color:gold" >&#9733; &#9733; &#9733; &#9733; &#9733;<br> EDITOR'S CHOICE</span>
+                                        </template>
+                                    </td>
+                                </tr>
+                            </template>
+                            <tr>
+                                <td class="border" colspan="3"></td>
+                            </tr>
+                        </tbody>
                     </template>
-                </tbody>
+                </template>
             </table>
             <div class="centered" x-show="count != games.length">
                 <a class="button button-color" x-on:click="count + 30 > games.length ? count = games.length : count += 30">
