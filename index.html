@@ -83,8 +83,7 @@
                             </template>
                             <template x-if="games[game_index].rating" x-data="{ length: games[game_index].rating.length }">
                                 <tr>
-                                    <td></td>
-                                    <td class="rating" colspan="2">
+                                    <td class="rating" colspan="3">
                                         <template x-if="length <= 5">
                                             <template x-for="i in 5">
                                                 <span>
@@ -94,7 +93,11 @@
                                             </template>
                                         </template>
                                         <template x-if="length > 5">
-                                            <span style="color:gold" >&#9733; &#9733; &#9733; &#9733; &#9733;<br> EDITOR'S CHOICE</span>
+                                            <span>
+                                                <span class="stars" >&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+                                                <br>
+                                                <span class="ec"><strong>Editor's Choice</strong></span>
+                                            </span>
                                         </template>
                                     </td>
                                 </tr>

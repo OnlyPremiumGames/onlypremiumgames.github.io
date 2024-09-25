@@ -52,6 +52,15 @@ td.rating {
   font-size: 200%;
 }
 
+span.stars {
+  color: gold;
+}
+
+span.ec {
+  color: gold;
+  font-size: 75%;
+}
+
 .centered {
   display: flex;
   justify-content: center;
