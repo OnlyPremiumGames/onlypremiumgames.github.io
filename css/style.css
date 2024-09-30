@@ -35,12 +35,8 @@ td > a {
   color: var(--color);
 }
 
-td {
+td.no-border {
   border-bottom: none;  
-}
-
-td.border {
-  border-bottom: 0.1rem solid #e1e1e1;
 }
 
 td.date {

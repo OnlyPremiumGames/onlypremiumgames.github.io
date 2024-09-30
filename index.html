@@ -41,48 +41,60 @@
         </p>
 
         <h3>List</h3>
-        <div x-data="{ games: [], count: 30 }" x-init="games = await (await fetch('/data/finished.json')).json();">
+        <div x-data="{
+            games: [],
+            count: 30,
+            search: '',
+            get filteredGames() {
+                return this.games.filter(
+                    i => i.title.includes(this.search)
+                )
+            }
+            }" x-init="games = await (await fetch('/data/finished.json')).json();">
+            <input x-model="search" placeholder="Search...">
+
             <table>
                 <template x-if="games.length > 0">
-                    <template x-for="(game, game_index) in count">
+                    <template x-for="(dummy, index) in Math.min(filteredGames.length, count)">
                         <tbody>
                             <tr>
-                                <td>
-                                    <span x-html="games[game_index].id"></span>
+                                <td x-bind:class="filteredGames[index].hasOwnProperty('rating') ? 'no-border' : ''">
+                                    <span x-html="filteredGames[index].id"></span>
                                 </td>
             
-                                <template x-if="games[game_index].link">
-                                    <td>
-                                        <a x-bind:href="games[game_index].link" target="_blank">
-                                            <span x-html="games[game_index].title"></span>
+                                <template x-if="filteredGames[index].hasOwnProperty('link')">
+                                    <td x-bind:class="filteredGames[index].hasOwnProperty('rating') ? 'no-border' : ''">
+                                        <a x-bind:href="filteredGames[index].link" target="_blank">
+                                            <span x-html="filteredGames[index].title"></span>
                                         </a>
                                     </td>
                                 </template>
-                                <template x-if="!games[game_index].link">
-                                    <td>
-                                        <span x-html="games[game_index].title"></span>
+                                <template x-if="!filteredGames[index].hasOwnProperty('link')">
+                                    <td x-bind:class="filteredGames[index].hasOwnProperty('rating') ? 'no-border' : ''">
+                                        <span x-html="filteredGames[index].title"></span>
                                     </td>
                                 </template>
             
-                                <template x-if="games[game_index].date">
-                                    <td class="no-border date">
-                                        <span x-html="convertDate(games[game_index].date)"></span>
+                                <template x-if="filteredGames[index].hasOwnProperty('date')">
+                                    <td class="date" x-bind:class="filteredGames[index].hasOwnProperty('rating') ? 'no-border' : ''">
+                                        <span x-html="convertDate(filteredGames[index].date)"></span>
                                     </td>
                                 </template>
-                                <template x-if="!games[game_index].date">
-                                    <td>-</td>
+                                <template x-if="!filteredGames[index].hasOwnProperty('date')">
+                                    <td></td>
                                 </template>
                             </tr>
-                            <template x-if="games[game_index].verdict">
+                            <template x-if="filteredGames[index].hasOwnProperty('verdict')">
                                 <tr>
-                                    <td></td>
-                                    <td colspan="2">
-                                        <span x-html="games[game_index].verdict"></span>
+                                    <td x-bind:class="filteredGames[index].hasOwnProperty('rating') ? 'no-border' : ''">
+                                    </td>
+                                    <td colspan="2" x-bind:class="filteredGames[index].hasOwnProperty('rating') ? 'no-border' : ''">
+                                        <span x-html="filteredGames[index].verdict"></span>
                                     </td>
                                 </tr>
                             </template>
-                            <template x-if="games[game_index].rating" x-data="{ length: games[game_index].rating.length }">
-                                <tr>
+                            <template x-if="filteredGames[index].hasOwnProperty('rating')">
+                                <tr x-data="{ length: filteredGames[index].rating.length }">
                                     <td class="rating" colspan="3">
                                         <template x-if="length <= 5">
                                             <template x-for="i in 5">
@@ -102,16 +114,18 @@
                                     </td>
                                 </tr>
                             </template>
-                            <tr>
-                                <td class="border" colspan="3"></td>
-                            </tr>
                         </tbody>
                     </template>
                 </template>
             </table>
-            <div class="centered" x-show="count != games.length">
-                <a class="button button-color" x-on:click="count + 30 > games.length ? count = games.length : count += 30">
+            <div class="centered" x-show="count < filteredGames.length">
+                <a class="button button-color" x-on:click="count + 30 > filteredGames.length ? count = filteredGames.length : count += 30">
                     More ...
+                </a>
+            </div>
+            <div class="centered">
+                <a class="button button-color" x-on:click="scrollTop">
+                    &uarr;
                 </a>
             </div>
         </div>
@@ -121,6 +135,13 @@
                     let dateObject = new Date(Date.parse(jsonDate));
                     return dateObject.toLocaleDateString();
             }
+        </script>
+
+        <script>
+            function scrollTop() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }       
         </script>
 
     </main>
