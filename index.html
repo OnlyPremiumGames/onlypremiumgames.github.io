@@ -51,7 +51,7 @@
                 )
             }
             }" x-init="games = await (await fetch('/data/finished.json')).json();">
-            <input x-model="search" placeholder="Search...">
+            <input type="text" x-model="search" placeholder="Search...">
 
             <table>
                 <template x-if="games.length > 0">
