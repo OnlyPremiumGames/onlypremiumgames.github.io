@@ -56,45 +56,45 @@
             <table>
                 <template x-if="games.length > 0">
                     <template x-for="(dummy, index) in Math.min(filteredGames.length, count)">
-                        <tbody>
+                        <tbody x-data="{ game: [] }" x-init="game = filteredGames[index]">
                             <tr>
-                                <td x-bind:class="filteredGames[index].hasOwnProperty('rating') ? 'no-border' : ''">
-                                    <span x-html="filteredGames[index].id"></span>
+                                <td x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
+                                    <span x-html="game.id"></span>
                                 </td>
             
-                                <template x-if="filteredGames[index].hasOwnProperty('link')">
-                                    <td x-bind:class="filteredGames[index].hasOwnProperty('rating') ? 'no-border' : ''">
-                                        <a x-bind:href="filteredGames[index].link" target="_blank">
-                                            <span x-html="filteredGames[index].title"></span>
+                                <template x-if="game.hasOwnProperty('link')">
+                                    <td x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
+                                        <a x-bind:href="game.link" target="_blank">
+                                            <span x-html="game.title"></span>
                                         </a>
                                     </td>
                                 </template>
-                                <template x-if="!filteredGames[index].hasOwnProperty('link')">
-                                    <td x-bind:class="filteredGames[index].hasOwnProperty('rating') ? 'no-border' : ''">
-                                        <span x-html="filteredGames[index].title"></span>
+                                <template x-if="!game.hasOwnProperty('link')">
+                                    <td x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
+                                        <span x-html="game.title"></span>
                                     </td>
                                 </template>
             
-                                <template x-if="filteredGames[index].hasOwnProperty('date')">
-                                    <td class="date" x-bind:class="filteredGames[index].hasOwnProperty('rating') ? 'no-border' : ''">
-                                        <span x-html="convertDate(filteredGames[index].date)"></span>
+                                <template x-if="game.hasOwnProperty('date')">
+                                    <td class="date" x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
+                                        <span x-html="convertDate(game.date)"></span>
                                     </td>
                                 </template>
-                                <template x-if="!filteredGames[index].hasOwnProperty('date')">
+                                <template x-if="!game.hasOwnProperty('date')">
                                     <td></td>
                                 </template>
                             </tr>
-                            <template x-if="filteredGames[index].hasOwnProperty('verdict')">
+                            <template x-if="game.hasOwnProperty('verdict')">
                                 <tr>
-                                    <td x-bind:class="filteredGames[index].hasOwnProperty('rating') ? 'no-border' : ''">
+                                    <td x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
                                     </td>
-                                    <td colspan="2" x-bind:class="filteredGames[index].hasOwnProperty('rating') ? 'no-border' : ''">
-                                        <span x-html="filteredGames[index].verdict"></span>
+                                    <td colspan="2" x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
+                                        <span x-html="game.verdict"></span>
                                     </td>
                                 </tr>
                             </template>
-                            <template x-if="filteredGames[index].hasOwnProperty('rating')">
-                                <tr x-data="{ length: filteredGames[index].rating.length }">
+                            <template x-if="game.hasOwnProperty('rating')">
+                                <tr x-data="{ length: game.rating.length }">
                                     <td class="rating" colspan="3">
                                         <template x-if="length <= 5">
                                             <template x-for="i in 5">
