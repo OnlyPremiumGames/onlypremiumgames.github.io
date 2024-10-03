@@ -2,28 +2,28 @@
   --color: #0066ff;
 }
 
-body > header {
+body>header {
   padding-top: 1rem;
   text-align: center;
 }
 
-header > svg {
+header>svg {
   max-width: 270px;
   max-height: 270px;
   color: var(--color);
 }
 
-header > h2 {
+header>h2 {
   font-family: 'Geo', sans-serif;
 }
 
-body > main {
+body>main {
   display: block;
   flex-direction: row;
   justify-content: center;
 }
 
-main > h3 {
+main>h3 {
   margin-top: 4rem;
 }
 
@@ -31,16 +31,16 @@ input[type='text']:focus {
   border-color: var(--color);
 }
 
-div > table {
+div>table {
   display: table;
 }
 
-td > a {
+td>a {
   color: var(--color);
 }
 
 td.no-border {
-  border-bottom: none;  
+  border-bottom: none;
 }
 
 td.date {
@@ -52,11 +52,21 @@ td.rating {
   font-size: 200%;
 }
 
+td.buttons {
+  padding-top: 3rem;
+}
+
+span.ec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 span.stars {
   color: gold;
 }
 
-span.ec {
+span.ec-text {
   color: gold;
   font-size: 75%;
 }
@@ -72,12 +82,11 @@ span.ec {
   background-color: transparent;
 }
 
-body > footer {
-  padding-top: 3rem;
+body>footer {
   padding-bottom: 1rem;
   text-align: center;
 }
 
-footer > a {
+footer>a {
   color: var(--color);
 }

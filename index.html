@@ -65,7 +65,7 @@
                                 <td x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
                                     <span x-html="game.id"></span>
                                 </td>
-                            
+
                                 <template x-if="game.hasOwnProperty('link')">
                                     <td x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
                                         <a x-bind:href="game.link" target="_blank">
@@ -78,7 +78,7 @@
                                         <span x-html="game.title"></span>
                                     </td>
                                 </template>
-                            
+
                                 <template x-if="game.hasOwnProperty('date')">
                                     <td class="date" x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
                                         <span x-html="convertDate(game.date)"></span>
@@ -109,10 +109,9 @@
                                             </template>
                                         </template>
                                         <template x-if="length > 5">
-                                            <span>
+                                            <span class="ec">
                                                 <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                                                <br>
-                                                <span class="ec"><strong>Editor's Choice</strong></span>
+                                                <span class="ec-text"><strong>Editor's Choice</strong></span>
                                             </span>
                                         </template>
                                     </td>
@@ -121,17 +120,17 @@
                         </tbody>
                     </template>
                 </template>
+                <tr>
+                    <td class="buttons no-border" colspan="3">
+                        <a class="button button-color float-left" x-show="showMore" x-on:click="count += 30">
+                            More ...
+                        </a>
+                        <a class="button button-color float-right" x-on:click="scrollTop">
+                            &uarr;
+                        </a>
+                    </td>
+                </tr>
             </table>
-            <div class="centered" x-show="showMore">
-                <a class="button button-color" x-on:click="count += 30">
-                    More ...
-                </a>
-            </div>
-            <div class="centered">
-                <a class="button button-color" x-on:click="scrollTop">
-                    &uarr;
-                </a>
-            </div>
         </div>
 
         <script>
