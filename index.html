@@ -21,7 +21,9 @@
             stroke="none" stroke-width="0" xmlns="http://www.w3.org/2000/svg">
             <polygon points="0,0 150,0 150,120 120,120 120,30 30,30 30,120 150,120 150,150 0,150" fill="#00aaff" />
             <polygon points="60,60 210,60 210,150 90,150 90,120 180,120 180,90 90,90 90,210 60,210" fill="#0088ff" />
-            <polygon points="120,120 270,120 270,150 150,150 150,240 240,240 240,210 180,210 180,180 270,180 270,270 120,270" fill="#0066ff" />
+            <polygon
+                points="120,120 270,120 270,150 150,150 150,240 240,240 240,210 180,210 180,180 270,180 270,270 120,270"
+                fill="#0066ff" />
         </svg>
         <h2>Only Premium Games</h2>
     </header>
@@ -120,16 +122,20 @@
                         </tbody>
                     </template>
                 </template>
-                <tr>
-                    <td class="buttons no-border" colspan="3">
-                        <a class="button button-color float-left" x-show="showMore" x-on:click="count += 30">
-                            More ...
-                        </a>
-                        <a class="button button-color float-right" x-on:click="scrollTop">
-                            &uarr;
-                        </a>
-                    </td>
-                </tr>
+                <tfoot>
+                    <tr>
+                        <td class="no-border" colspan="3">
+                            <span class="buttons">
+                                <a class="button button-color float-left" x-show="showMore" x-on:click="count += 30">
+                                    More ...
+                                </a>
+                                <a class="button button-color float-right" x-on:click="scrollTop">
+                                    &uarr;
+                                </a>
+                            </span>
+                        </td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
 
