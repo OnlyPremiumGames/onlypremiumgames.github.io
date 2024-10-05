@@ -120,16 +120,20 @@
                         </tbody>
                     </template>
                 </template>
-                <tr>
-                    <td class="buttons no-border" colspan="3">
-                        <a class="button button-color float-left" x-show="showMore" x-on:click="count += 30">
-                            More ...
-                        </a>
-                        <a class="button button-color float-right" x-on:click="scrollTop">
-                            &uarr;
-                        </a>
-                    </td>
-                </tr>
+                <tfoot>
+                    <tr>
+                        <td class="no-border" colspan="3">
+                            <span class="buttons">
+                                <a class="button button-color float-left" x-show="showMore" x-on:click="count += 30">
+                                    More ...
+                                </a>
+                                <a class="button button-color float-right" x-on:click="scrollTop">
+                                    &uarr;
+                                </a>
+                            </span>
+                        </td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
 

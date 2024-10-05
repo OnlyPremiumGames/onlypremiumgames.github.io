@@ -52,8 +52,10 @@ td.rating {
   font-size: 200%;
 }
 
-td.buttons {
+span.buttons {
   padding-top: 3rem;
+  display: flex;
+  justify-content: center;
 }
 
 span.ec {
