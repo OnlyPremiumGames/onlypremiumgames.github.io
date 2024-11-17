@@ -52,6 +52,10 @@ td.rating {
   font-size: 200%;
 }
 
+td.blog-title {
+  color: var(--color);
+}
+
 span.buttons {
   padding-top: 3rem;
   display: flex;
