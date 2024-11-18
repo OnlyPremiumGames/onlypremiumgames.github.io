@@ -35,6 +35,10 @@ div>table {
   display: table;
 }
 
+p>a {
+  color: var(--color);
+}
+
 td>a {
   color: var(--color);
 }
