@@ -36,8 +36,8 @@
         <p>
             <a href="mailto:hello@onlypremium.games">Hello</a>, my name is Marek, I'm from Slovakia
             and I play only premium games on my iPhone and iPad. After finishing a few, I started my
-            private list. After finishing more than 300, I decided to share my list online along with my
-            rating and thoughts. Occasionally, I <a href="blog.html">blog</a> about them.<br>
+            private list. After finishing more than 300, I decided to <a href="index.html">share my
+            list online along with my rating and thoughts</a>. Occasionally, I blog about them.<br>
             By finishing, I mean that I either saw the "thanks for playing" screen or the credits roll.
             By premium, I mean games for which I pay money upfront to get the whole experience. I'm also OK
             with trying games for free and then paying to unlock content. I consider games on subscription
@@ -84,7 +84,9 @@
                             <tr>
                                 <td></td>
                                 <td colspan="2">
-                                    <span x-html="post.verdict"></span>
+                                    <template x-for="text in post.verdict">
+                                        <span x-html="text"></span>
+                                    </template>                                    
                                 </td>
                             </tr>
                         </tbody>
