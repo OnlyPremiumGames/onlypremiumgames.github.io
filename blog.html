@@ -25,7 +25,9 @@
             stroke="none" stroke-width="0" xmlns="http://www.w3.org/2000/svg">
             <polygon points="0,0 150,0 150,120 120,120 120,30 30,30 30,120 150,120 150,150 0,150" fill="#00aaff" />
             <polygon points="60,60 210,60 210,150 90,150 90,120 180,120 180,90 90,90 90,210 60,210" fill="#0088ff" />
-            <polygon points="120,120 270,120 270,150 150,150 150,240 240,240 240,210 180,210 180,180 270,180 270,270 120,270" fill="#0066ff" />
+            <polygon
+                points="120,120 270,120 270,150 150,150 150,240 240,240 240,210 180,210 180,180 270,180 270,270 120,270"
+                fill="#0066ff" />
         </svg>
         <h2>Only Premium Games</h2>
     </header>
@@ -37,7 +39,7 @@
             <a href="mailto:hello@onlypremium.games">Hello</a>, my name is Marek, I'm from Slovakia
             and I play only premium games on my iPhone and iPad. After finishing a few, I started my
             private list. After finishing more than 300, I decided to <a href="index.html">share my
-            list online along with my rating and thoughts</a>. Occasionally, I blog about them.<br>
+                list online along with my rating and thoughts</a>. Occasionally, I blog about them.<br>
             By finishing, I mean that I either saw the "thanks for playing" screen or the credits roll.
             By premium, I mean games for which I pay money upfront to get the whole experience. I'm also OK
             with trying games for free and then paying to unlock content. I consider games on subscription
@@ -79,14 +81,14 @@
 
                                 <td class="date no-border">
                                     <span x-html="convertDate(post.date)"></span>
-                               </td>
+                                </td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td colspan="2">
                                     <template x-for="text in post.verdict">
                                         <span x-html="text"></span>
-                                    </template>                                    
+                                    </template>
                                 </td>
                             </tr>
                         </tbody>
