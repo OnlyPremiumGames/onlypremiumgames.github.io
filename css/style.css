@@ -101,14 +101,3 @@ body>footer {
 footer>a {
   color: var(--color);
 }
-
-.photo {
-  width: 100%;
-}
-
-@media (min-width: 40.0rem) {
-  .photo {
-    width: 300px;
-    float: right;
-  }
-}
