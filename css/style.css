@@ -67,14 +67,10 @@ span.buttons {
   justify-content: center;
 }
 
-span.ec {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-span.ec-text {
+span.editors-choice {
   font-size: 75%;
+  display: block;
+  flex-direction: column;
 }
 
 .centered {

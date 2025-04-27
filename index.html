@@ -108,22 +108,18 @@
                             <template x-if="game.hasOwnProperty('rating')">
                                 <tr x-data="{ length: game.rating.length }">
                                     <td class="rating" colspan="3">
-                                        <template x-if="length <= 5">
-                                            <template x-for="i in 5">
-                                                <span>
-                                                    <template x-if="i <= length"><span>&#9733;</span></template>
-                                                    <template x-if="i > length"><span>&#9734;</span></template>
-                                                </span>
-                                            </template>
+                                        <template x-for="i in 5">
+                                            <span>
+                                                <template x-if="i <= length"><span>&#9733;</span></template>
+                                                <template x-if="i > length"><span>&#9734;</span></template>
+                                            </span>
                                         </template>
                                         <template x-if="length == 6">
-                                            <span class="ec">
-                                                <span>&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                                                <span class="ec-text">
-                                                    <img src="img/olive-left.svg" height="50"></img>
-                                                    <strong>Editor's Choice</strong>
-                                                    <img src="img/olive-right.svg" height="50"></img>
-                                                </span>
+
+                                            <span class="editors-choice">
+                                                <img src="img/olive-left.svg" height="50"></img>
+                                                <strong>Editor's Choice</strong>
+                                                <img src="img/olive-right.svg" height="50"></img>
                                             </span>
                                         </template>
                                     </td>
