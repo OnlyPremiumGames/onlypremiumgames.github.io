@@ -73,6 +73,7 @@ span.editors-choice {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding-bottom: 1.2rem;
 }
 
 .button-color {
