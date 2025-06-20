@@ -97,16 +97,24 @@
                             </tr>
                             <template x-if="game.hasOwnProperty('verdict')">
                                 <tr>
-                                    <td x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
-                                    </td>
-                                    <td colspan="2" x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
+                                    <template x-if="game.hasOwnProperty('icon')">
+                                        <td class="app-icon"
+                                            x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
+                                            <img x-bind:src="game.icon"></img>
+                                        </td>
+                                    </template>
+                                    <template x-if="!game.hasOwnProperty('icon')">
+                                        <td x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
+                                        </td>
+                                    </template>
+                                    <td colspan="3" x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
                                         <span x-html="game.verdict"></span>
                                     </td>
                                 </tr>
                             </template>
                             <template x-if="game.hasOwnProperty('rating')">
                                 <tr x-data="{ length: game.rating.length }">
-                                    <td class="rating" colspan="3">
+                                    <td class="rating" colspan="4">
                                         <template x-for="i in 5">
                                             <span>
                                                 <template x-if="i <= length"><span>&#9733;</span></template>
@@ -115,9 +123,9 @@
                                         </template>
                                         <template x-if="length == 6">
                                             <span class="editors-choice">
-                                                <img src="img/olive-left.svg" height="50"></img>
+                                                <img src="img/olive-left.svg"></img>
                                                 <strong>Editor's Choice</strong>
-                                                <img src="img/olive-right.svg" height="50"></img>
+                                                <img src="img/olive-right.svg"></img>
                                             </span>
                                         </template>
                                     </td>
@@ -128,7 +136,7 @@
                 </template>
                 <tfoot>
                     <tr>
-                        <td class="no-border" colspan="3">
+                        <td class="no-border" colspan="4">
                             <span class="buttons">
                                 <a class="button button-color float-left" x-show="showMore" x-on:click="count += 30">
                                     More ...

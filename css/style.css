@@ -43,6 +43,15 @@ td>a {
   color: var(--color);
 }
 
+td>img {
+  max-width: 50px;
+  border-radius: 10px;
+}
+
+span>img {
+  max-height: 50px;
+}
+
 td.no-border {
   border-bottom: none;
 }
@@ -55,6 +64,14 @@ td.date {
 td.rating {
   text-align: center;
   font-size: 200%;
+}
+
+td.app-icon {
+  width: 50px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 td.blog-title {
