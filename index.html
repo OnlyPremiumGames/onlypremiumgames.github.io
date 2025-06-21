@@ -51,7 +51,7 @@
         <div x-data="{
                       games: [],
                       search: '',
-                      count: 30,
+                      count: 15,
                       showMore: false,
                       get filteredGames() {
                         let result = this.games.filter(g => g.title.includes(this.search));
@@ -59,7 +59,7 @@
                         return result.splice(0,  Math.min(result.length, this.count));
                       },
                       resetCount() {
-                        this.count = 30;
+                        this.count = 15;
                       }
                       }" x-init="games = await (await fetch('/data/finished.json')).json();">
             <input type="text" x-model="search" placeholder="Search..." x-on:input="resetCount">
@@ -138,7 +138,7 @@
                     <tr>
                         <td class="no-border" colspan="4">
                             <span class="buttons">
-                                <a class="button button-color float-left" x-show="showMore" x-on:click="count += 30">
+                                <a class="button button-color float-left" x-show="showMore" x-on:click="count += 15">
                                     More ...
                                 </a>
                                 <a class="button button-color float-right" x-on:click="scrollTop">
