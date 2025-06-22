@@ -69,9 +69,17 @@
                     <template x-for="game in filteredGames">
                         <tbody>
                             <tr>
-                                <td x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
-                                    <span x-html="game.id"></span>
-                                </td>
+                                <template x-if="game.hasOwnProperty('icon')">
+                                    <td class="app-icon"
+                                        x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
+                                        <img x-bind:src="game.icon" x-bind:alt="game.id" x-bind:title="game.id"></img>
+                                    </td>
+                                </template>
+                                <template x-if="!game.hasOwnProperty('icon')">
+                                    <td x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
+                                        <span x-html="game.id"></span>
+                                    </td>
+                                </template>
 
                                 <template x-if="game.hasOwnProperty('link')">
                                     <td x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
@@ -97,16 +105,6 @@
                             </tr>
                             <template x-if="game.hasOwnProperty('verdict')">
                                 <tr>
-                                    <template x-if="game.hasOwnProperty('icon')">
-                                        <td class="app-icon"
-                                            x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
-                                            <img x-bind:src="game.icon"></img>
-                                        </td>
-                                    </template>
-                                    <template x-if="!game.hasOwnProperty('icon')">
-                                        <td x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
-                                        </td>
-                                    </template>
                                     <td colspan="3" x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
                                         <span x-html="game.verdict"></span>
                                     </td>
