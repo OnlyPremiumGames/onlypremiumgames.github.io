@@ -2,6 +2,8 @@
   {
     "id": 5,
     "title": "Coffee Pool",
+    "link": "https://apps.apple.com/us/app/coffee-pool/id6737482186",
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8f/a6/fd/8fa6fda0-dc8b-61fa-547b-905c598d6b52/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/340x340bb.webp",
     "date": "2025-09-22",
     "verdict": [
       "We have a saying in Slovakia that translates roughly to \"exception proves the rule.\" As much as I dislike ads in games, every now and then I come across one I enjoy despite them.",
@@ -19,6 +21,8 @@
   {
     "id": 4,
     "title": "Art of Rally",
+    "link": "https://apps.apple.com/us/app/art-of-rally/id6459581344",
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e3/a3/f2/e3a3f2c8-44df-9a02-9235-8e191847dda6/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/340x340bb.webp",
     "date": "2025-08-23",
     "verdict": [
       "\"The only game that is both thrilling and relaxing at the same time.\" Those would have been my thoughts on the game, along with a shiny 5-star rating—if things hadn’t gone sideways.",
@@ -38,15 +42,16 @@
   {
     "id": 3,
     "title": "Finished GOTY 2024",
+    "icon": "img/logo.png",
     "date": "2024-12-29",
     "verdict": [
       "Here are my overall top 5 games that I finished in 2024:<br/><br/>",
       "1. <a href=\"https://apps.apple.com/us/app/spiritfarer-netflix-edition/id1610577424\" target=\"_blank\">Spiritfarer</a>",
       " - I'm not really into managmenet (or gardening?) games, but this heartwarming gem helped me a lot to get through a quite difficult time. ",
       "Despite its heavy theme, it was pure joy to play it. And it's soundtrack is simply exceptional.<br/><br/>",
-      "2. <a href=\"https://apps.apple.com/us/app/spiritfarer-netflix-edition/id1610577424\" target=\"_blank\">Transistor</a>",
+      "2. <a href=\"https://apps.apple.com/us/app/transistor/id948857526\" target=\"_blank\">Transistor</a>",
       " - I was a huge fan of Bastion back in 2011, so I always considered this one a must-play. After finally finishing it this year, I consder it a masterpiece.<br/><br/>",
-      "3. <a href=\"https://apps.apple.com/ph/app/braid-anniversary-edition/id6450126747\" target=\"_blank\">Braid, Anniversary Edition</a>",
+      "3. <a href=\"https://apps.apple.com/us/app/braid-anniversary-edition/id6450126747\" target=\"_blank\">Braid, Anniversary Edition</a>",
       " - I never played the original and my brother did not quite finish it when it got released back in 2008... ",
       "Plus a former editor-in-chief of a gaming magazine once said that only really smart people can finish it without a guide. ",
       "All of this was additional motivation for me to finish it. Plus I could think about the levels even when not playing it which helped me a lot at that time.<br/><br/>",
@@ -60,10 +65,11 @@
   {
     "id": 2,
     "title": "Released (and finished) GOTY 2024",
+    "icon": "img/logo.png",
     "date": "2024-12-29",
     "verdict": [
       "Here are my top 5 games that were released (and I finished them) in 2024:<br/><br/>",
-      "1. <a href=\"https://apps.apple.com/ph/app/braid-anniversary-edition/id6450126747\" target=\"_blank\">Braid, Anniversary Edition</a>",
+      "1. <a href=\"https://apps.apple.com/us/app/braid-anniversary-edition/id6450126747\" target=\"_blank\">Braid, Anniversary Edition</a>",
       " - I never played the original and my brother did not quite finish it when it got released back in 2008... ",
       "Plus a former editor-in-chief of a gaming magazine once said that only really smart people can finish it without a guide. ",
       "All of this was additional motivation for me to finish it. Plus I could think about the levels even when not playing it which helped me a lot at that time.<br/><br/>",
@@ -82,6 +88,7 @@
   {
     "id": 1,
     "title": "First Blog Post",
+    "icon": "img/logo.png",
     "date": "2024-11-17",
     "verdict": "The very first blog post. There's not much more to say. Only time will tell if I will keep blogging or not..."
   }

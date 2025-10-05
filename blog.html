@@ -70,13 +70,29 @@
                     <template x-for="post in filteredPosts">
                         <tbody>
                             <tr>
-                                <td class="no-border">
-                                    <span x-html="post.id"></span>
-                                </td>
+                                <template x-if="post.hasOwnProperty('icon')">
+                                    <td class="app-icon no-border">
+                                        <img x-bind:src="post.icon" x-bind:alt="post.id" x-bind:title="post.id"></img>
+                                    </td>
+                                </template>
+                                <template x-if="!post.hasOwnProperty('icon')">
+                                    <td class="no-border">
+                                        <span x-html="post.id"></span>
+                                    </td>
+                                </template>
 
-                                <td class="blog-title no-border">
-                                    <span x-html="post.title"></span>
-                                </td>
+                                <template x-if="post.hasOwnProperty('link')">
+                                    <td class="no-border">
+                                        <a x-bind:href="post.link" target="_blank">
+                                            <span x-html="post.title"></span>
+                                        </a>
+                                    </td>
+                                </template>
+                                <template x-if="!post.hasOwnProperty('link')">
+                                    <td class="no-border">
+                                        <span x-html="post.title"></span>
+                                    </td>
+                                </template>
 
                                 <td class="date no-border">
                                     <span x-html="convertDate(post.date)"></span>
