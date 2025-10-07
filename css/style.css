@@ -77,6 +77,10 @@ td.blog-title {
   color: var(--color);
 }
 
+td.blog-text {
+  padding-bottom: 5rem;
+}
+
 span.buttons {
   padding-top: 3rem;
   display: flex;
