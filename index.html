@@ -105,7 +105,8 @@
                             </tr>
                             <template x-if="game.hasOwnProperty('verdict')">
                                 <tr>
-                                    <td colspan="3" x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
+                                    <td x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''"></td>
+                                    <td colspan="2" x-bind:class="game.hasOwnProperty('rating') ? 'no-border' : ''">
                                         <span x-html="game.verdict"></span>
                                     </td>
                                 </tr>
