@@ -73,8 +73,8 @@ td.app-icon {
   padding-right: 0;
 }
 
-td.blog-title {
-  color: var(--color);
+td.blog-text {
+  padding-bottom: 5rem;
 }
 
 span.buttons {

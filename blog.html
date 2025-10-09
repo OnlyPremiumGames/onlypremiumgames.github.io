@@ -36,10 +36,10 @@
 
         <h3>About</h3>
         <p>
-            <a href="mailto:hello@onlypremium.games">Hello</a>, my name is Marek, I'm from Slovakia and I play only
-            premium games on my iPhone and iPad. After finishing a few, I started my private list. After finishing more
-            than 300, I decided to share my <a href="index.html">list</a> online along with my rating and thoughts.
-            Occasionally, I blog about them.<br>
+            <a href="mailto:hello@onlypremium.games">Hello</a>, my name is Marek, I'm from Slovakia and I
+            <a href="index.html">play</a> only premium games on my iPhone and iPad. After finishing a few, I started
+            my private list. After finishing more than 300, I decided to share my list online along with my rating
+            and thoughts. Occasionally, I blog about them.<br>
             By finishing, I mean that I either saw the "thanks for playing" screen or the credits roll. By premium, I
             mean games for which I pay money upfront to get the whole experience. I'm also OK with trying games for free
             and then paying to unlock content. I consider games on subscription services like Apple Arcade&trade; or
@@ -70,17 +70,9 @@
                     <template x-for="post in filteredPosts">
                         <tbody>
                             <tr>
-                                <template x-if="post.hasOwnProperty('icon')">
-                                    <td class="app-icon no-border">
-                                        <img x-bind:src="post.icon" x-bind:alt="post.id" x-bind:title="post.id"></img>
-                                    </td>
-                                </template>
-                                <template x-if="!post.hasOwnProperty('icon')">
-                                    <td class="no-border">
-                                        <span x-html="post.id"></span>
-                                    </td>
-                                </template>
-
+                                <td class="app-icon no-border">
+                                    <img x-bind:src="post.icon" x-bind:alt="post.id" x-bind:title="post.id"></img>
+                                </td>
                                 <template x-if="post.hasOwnProperty('link')">
                                     <td class="no-border">
                                         <a x-bind:href="post.link" target="_blank">
@@ -93,14 +85,13 @@
                                         <span x-html="post.title"></span>
                                     </td>
                                 </template>
-
                                 <td class="date no-border">
                                     <span x-html="convertDate(post.date)"></span>
                                 </td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td colspan="2">
+                                <td class="blog-text"></td>
+                                <td class="blog-text" colspan="2">
                                     <template x-for="text in post.verdict">
                                         <span x-html="text"></span>
                                     </template>
