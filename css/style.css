@@ -2,7 +2,7 @@
   --color: #0066ff;
 }
 
-body>header {
+header {
   padding-top: 1rem;
   text-align: center;
 }
@@ -10,11 +10,6 @@ body>header {
 header>svg {
   max-width: 270px;
   max-height: 270px;
-  color: var(--color);
-}
-
-header>h2 {
-  font-family: 'Geo', sans-serif;
 }
 
 body>main {
@@ -35,11 +30,7 @@ div>table {
   display: table;
 }
 
-p>a {
-  color: var(--color);
-}
-
-td>a {
+a {
   color: var(--color);
 }
 
@@ -101,8 +92,4 @@ span.editors-choice {
 body>footer {
   padding-bottom: 1rem;
   text-align: center;
-}
-
-footer>a {
-  color: var(--color);
 }

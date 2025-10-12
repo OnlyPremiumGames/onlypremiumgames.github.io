@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Only Premium Games">
+    <meta property="og:image" content="https://onlypremium.games/img/logo.png">
+    <title>Only Premium Games</title>
+    <link rel="icon" href="img/favicon.ico" sizes="32x32">
+    <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/icon180.png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer async data-host="onlypremium.games" src="https://liteanalytics.com/lite.js"></script>
+</head>
+
+<body>
+    <div x-data="{ headerHTML: '' }"
+        x-init="fetch('/partials/header.html').then(r => r.text()).then(html => headerHTML = html)">
+        <div x-html="headerHTML"></div>
+    </div>
+
+    <main class="container">
+
+        <h3>About</h3>
+        <div x-data="{ headerHTML: '' }"
+            x-init="fetch('/partials/about.html').then(r => r.text()).then(html => headerHTML = html)">
+            <div x-html="headerHTML"></div>
+        </div>
+
+        <h3>
+            <a href="index.html">List</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="blog.html">Blog</a>
+            &nbsp;&nbsp;&nbsp;
+            Beta
+        </h3>
+        <div x-data="{
+                      posts: [],
+                      search: '',
+                      count: 30,
+                      showMore: false,
+                      get filteredPosts() {
+                        let result = this.posts.filter(g => g.title.includes(this.search));
+                        this.showMore = result.length > this.count;
+                        return result.splice(0,  Math.min(result.length, this.count));
+                      },
+                      resetCount() {
+                        this.count = 30;
+                      }
+                      }" x-init="posts = await (await fetch('/data/beta.json')).json();">
+            <input type="text" x-model="search" placeholder="Search..." x-on:input="resetCount">
+
+            <table>
+                <template x-if="posts.length > 0">
+                    <template x-for="post in filteredPosts">
+                        <tbody>
+                            <tr>
+                                <td class="app-icon no-border">
+                                    <img x-bind:src="post.icon" x-bind:alt="post.id" x-bind:title="post.id"></img>
+                                </td>
+                                <td class="no-border">
+                                    <a x-bind:href="post.link" target="_blank">
+                                        <span x-html="post.title"></span>
+                                    </a>
+                                </td>
+                                <td class="date no-border">
+                                    <span x-html="convertDate(post.date)"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="no-border"></td>
+                                <td class="no-border rating" colspan="2">
+                                    <img x-bind:src="post.image" x-bind:alt="post.id" x-bind:title="post.id"></img>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </template>
+                </template>
+                <tfoot>
+                    <tr>
+                        <td class="no-border" colspan="3">
+                            <span class="buttons">
+                                <a class="button button-color float-left" x-show="showMore" x-on:click="count += 30">
+                                    More ...
+                                </a>
+                                <a class="button button-color float-right" x-on:click="scrollTop">
+                                    &uarr;
+                                </a>
+                            </span>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <script>
+            function convertDate(jsonDate) {
+                let dateObject = new Date(Date.parse(jsonDate));
+                return dateObject.toLocaleDateString();
+            }
+        </script>
+
+        <script>
+            function scrollTop() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }       
+        </script>
+
+    </main>
+
+    <footer>
+        Built with <a href="https://milligram.io" target="_blank">Milligram</a>
+        and <a href="https://alpinejs.dev" target="_blank">Alpine.js</a>
+        by <a href="https://bsky.app/profile/keyplayermaek.bsky.social" target="_blank">Marek Toth</a>
+    </footer>
+
+</body>
+
+</html>

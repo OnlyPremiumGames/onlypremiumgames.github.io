@@ -10,8 +10,6 @@
     <link rel="icon" href="img/favicon.ico" sizes="32x32">
     <link rel="icon" href="img/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/icon180.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Geo">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -20,35 +18,27 @@
 </head>
 
 <body>
-    <header>
-        <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 270 270" width="100%" height="100%"
-            stroke="none" stroke-width="0" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="0,0 150,0 150,120 120,120 120,30 30,30 30,120 150,120 150,150 0,150" fill="#00aaff" />
-            <polygon points="60,60 210,60 210,150 90,150 90,120 180,120 180,90 90,90 90,210 60,210" fill="#0088ff" />
-            <polygon
-                points="120,120 270,120 270,150 150,150 150,240 240,240 240,210 180,210 180,180 270,180 270,270 120,270"
-                fill="#0066ff" />
-        </svg>
-        <h2>Only Premium Games</h2>
-    </header>
+    <div x-data="{ headerHTML: '' }"
+        x-init="fetch('/partials/header.html').then(r => r.text()).then(html => headerHTML = html)">
+        <div x-html="headerHTML"></div>
+    </div>
 
     <main class="container">
 
         <h3>About</h3>
-        <p>
-            <a href="mailto:hello@onlypremium.games">Hello</a>, my name is Marek, I'm from Slovakia and I
-            <a href="index.html">play</a> only premium games on my iPhone and iPad. After finishing a few, I started
-            my private list. After finishing more than 300, I decided to share my list online along with my rating
-            and thoughts. Occasionally, I blog about them.<br>
-            By finishing, I mean that I either saw the "thanks for playing" screen or the credits roll. By premium, I
-            mean games for which I pay money upfront to get the whole experience. I'm also OK with trying games for free
-            and then paying to unlock content. I consider games on subscription services like Apple Arcade&trade; or
-            Netflix&trade; premium, too. But I avoid games containing purchases for ad removal or games with double
-            currencies. There are some exceptions in my list, but those all have their own reasons.
-        </p>
+        <div x-data="{ headerHTML: '' }"
+            x-init="fetch('/partials/about.html').then(r => r.text()).then(html => headerHTML = html)">
+            <div x-html="headerHTML"></div>
+        </div>
 
+        <h3>
+            <a href="index.html">List</a>
+            &nbsp;&nbsp;&nbsp;
+            Blog
+            &nbsp;&nbsp;&nbsp;
+            <a href="beta.html">Beta</a>
+        </h3>
 
-        <h3>Blog</h3>
         <div x-data="{
                       posts: [],
                       search: '',

@@ -1,0 +1,34 @@
+[
+  {
+    "id": 4,
+    "title": "Spooky Express",
+    "link": "https://apps.apple.com/us/app/spooky-express/id6738424828",
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9d/68/11/9d6811c5-7333-7c66-c3e7-06bf0c552b19/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/340x340bb.webp",
+    "date": "2025-10-21",
+    "image": "img/beta/spooky_express.jpeg"
+  },
+  {
+    "id": 3,
+    "title": "Preserve&trade;",
+    "link": "https://apps.apple.com/us/app/preserve/id6739257316",
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/84/cc/22/84cc2229-7d85-70ce-f66e-4f55cee7a889/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/340x340bb.webp",
+    "date": "2025-09-16",
+    "image": "img/beta/preserve.jpeg"
+  },
+  {
+    "id": 2,
+    "title": "Pup Champs",
+    "link": "https://apps.apple.com/us/app/pup-champs/id6743483654",
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/09/83/58/0983585d-5222-f71c-7838-9ebf064695bc/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/340x340bb.webp",
+    "date": "2025-05-19",
+    "image": "img/beta/pup_champs.jpeg"
+  },
+  {
+    "id": 1,
+    "title": "Trigonarium",
+    "link": "https://apps.apple.com/us/app/trigonarium/id973810507",
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/5d/ed/dd/5deddd24-3aa9-59f0-52e0-fe4fd6a168b8/AppIcon-0-0-1x_U007emarketing-0-0-0-4-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/340x340bb.webp",
+    "date": "2025-04-08",
+    "image": "img/beta/trigonarium.jpeg"
+  }
+]
