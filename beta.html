@@ -37,6 +37,8 @@
             <a href="blog.html">Blog</a>
             &nbsp;&nbsp;&nbsp;
             Beta
+            &nbsp;&nbsp;&nbsp;
+            <a href="contact.html">Contact</a>
         </h3>
         <div x-data="{
                       posts: [],
@@ -44,7 +46,7 @@
                       count: 30,
                       showMore: false,
                       get filteredPosts() {
-                        let result = this.posts.filter(g => g.title.includes(this.search));
+                        let result = this.posts.filter(g => g.title.toLowerCase().includes(this.search.toLowerCase()));
                         this.showMore = result.length > this.count;
                         return result.splice(0,  Math.min(result.length, this.count));
                       },
@@ -72,8 +74,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="no-border"></td>
-                                <td class="no-border rating" colspan="2">
+                                <td></td>
+                                <td class="rating" colspan="2">
                                     <div>
                                         <img x-bind:src="post.image" x-bind:alt="post.id" x-bind:title="post.id"></img>
                                     </div>

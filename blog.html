@@ -37,6 +37,8 @@
             Blog
             &nbsp;&nbsp;&nbsp;
             <a href="beta.html">Beta</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="contact.html">Contact</a>
         </h3>
 
         <div x-data="{
@@ -45,7 +47,7 @@
                       count: 30,
                       showMore: false,
                       get filteredPosts() {
-                        let result = this.posts.filter(g => g.title.includes(this.search));
+                        let result = this.posts.filter(g => g.title.toLowerCase().includes(this.search.toLowerCase()));
                         this.showMore = result.length > this.count;
                         return result.splice(0,  Math.min(result.length, this.count));
                       },
@@ -80,8 +82,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="blog-text"></td>
-                                <td class="blog-text" colspan="2">
+                                <td class="with-padding"></td>
+                                <td class="with-padding" colspan="2">
                                     <template x-for="text in post.verdict">
                                         <span x-html="text"></span>
                                     </template>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Only Premium Games">
+    <meta property="og:image" content="https://onlypremium.games/img/logo.png">
+    <title>Only Premium Games</title>
+    <link rel="icon" href="img/favicon.ico" sizes="32x32">
+    <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/icon180.png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer async data-host="onlypremium.games" src="https://liteanalytics.com/lite.js"></script>
+</head>
+
+<body>
+    <div x-data="{ headerHTML: '' }"
+        x-init="fetch('/partials/header.html').then(r => r.text()).then(html => headerHTML = html)">
+        <div x-html="headerHTML"></div>
+    </div>
+
+    <main class="container">
+
+        <h3>Contact</h3>
+        <div x-data="{ headerHTML: '' }"
+            x-init="fetch('/partials/about.html').then(r => r.text()).then(html => headerHTML = html)">
+            <div x-html="headerHTML"></div>
+        </div>
+
+        <h3>
+            <a href="index.html">List</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="blog.html">Blog</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="beta.html">Beta</a>
+            &nbsp;&nbsp;&nbsp;
+            Contact
+        </h3>
+        <div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="centered no-border">
+                            <a href="mailto:hello@onlypremium.games"><img src="img/email.svg"></img></a>
+                        </td>
+                        <td class="centered no-border">
+                            <a href="https://bsky.app/profile/keyplayermaek.bsky.social" target="_blank">
+                                <img width="200" src="img/bluesky.svg"></img>
+                            </a>
+                        </td>
+                        <td class="centered no-border">
+                            <a href="https://bsky.app/profile/keyplayermaek.bsky.social" target="_blank">
+                                <img src="img/bluesky.svg"></img>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="centered with-padding">Say hello!</td>
+                        <td class="centered with-padding">Follow me!</td>
+                        <td class="centered with-padding">Follow OPG!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script>
+            function scrollTop() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }       
+        </script>
+
+    </main>
+
+    <footer>
+        Built with <a href="https://milligram.io" target="_blank">Milligram</a>
+        and <a href="https://alpinejs.dev" target="_blank">Alpine.js</a>
+        by <a href="https://bsky.app/profile/keyplayermaek.bsky.social" target="_blank">Marek Toth</a>
+    </footer>
+
+</body>
+
+</html>

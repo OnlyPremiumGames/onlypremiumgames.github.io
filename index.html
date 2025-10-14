@@ -37,6 +37,8 @@
             <a href="blog.html">Blog</a>
             &nbsp;&nbsp;&nbsp;
             <a href="beta.html">Beta</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="contact.html">Contact</a>
         </h3>
 
         <div x-data="{
@@ -45,7 +47,7 @@
                       count: 15,
                       showMore: false,
                       get filteredGames() {
-                        let result = this.games.filter(g => g.title.includes(this.search));
+                        let result = this.games.filter(g => g.title.toLowerCase().includes(this.search.toLowerCase()));
                         this.showMore = result.length > this.count;
                         return result.splice(0, Math.min(result.length, this.count));
                       },
