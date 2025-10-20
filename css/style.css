@@ -47,6 +47,10 @@ a>img {
   max-height: 150px;
 }
 
+div>img {
+  max-height: 1170px;
+}
+
 td.no-border {
   border-bottom: none;
 }
@@ -63,6 +67,7 @@ td.rating {
 
 td.centered {
   text-align: center;
+  width: 33.33%;
 }
 
 td.app-icon {
