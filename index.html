@@ -136,7 +136,6 @@
                     games: [],
                     search: '',
                     count: 15,
-                    showMore: false,
                     gameId: null,
                     allGames: [],
                     async init() {
@@ -156,8 +155,16 @@
                         if (this.search) {
                             filtered = filtered.filter(g => g.title.toLowerCase().includes(this.search.toLowerCase()));
                         }
-                        this.showMore = filtered.length > this.count;
                         return filtered.slice(0, this.count);
+                    },
+                    get showMore() {
+                        // Always show "More" if filtered by ID, or if there are more games to show
+                        if (this.gameId) return true;
+                        let filtered = this.games;
+                        if (this.search) {
+                            filtered = filtered.filter(g => g.title.toLowerCase().includes(this.search.toLowerCase()));
+                        }
+                        return filtered.length > this.count;
                     },
                     resetCount() {
                         this.count = 15;
