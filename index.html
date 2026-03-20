@@ -140,7 +140,7 @@
                     gameId: null,
                     allGames: [],
                     async init() {
-                        const match = window.location.pathname.match(/^\/game\/(\d+)/);
+                        const match = window.location.hash.match(/^#\/(\d+)/);
                         if (match) {
                             this.gameId = match[1];
                         }
@@ -167,6 +167,7 @@
                             this.gameId = null;
                             this.games = this.allGames;
                             this.count = 15;
+                            window.location.hash = '';
                         } else {
                             this.count += 15;
                         }
