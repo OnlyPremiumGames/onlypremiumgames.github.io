@@ -41,20 +41,7 @@
             <a href="contact.html">Contact</a>
         </h3>
 
-        <div x-data="{
-                      games: [],
-                      search: '',
-                      count: 15,
-                      showMore: false,
-                      get filteredGames() {
-                        let result = this.games.filter(g => g.title.toLowerCase().includes(this.search.toLowerCase()));
-                        this.showMore = result.length > this.count;
-                        return result.splice(0, Math.min(result.length, this.count));
-                      },
-                      resetCount() {
-                        this.count = 15;
-                      }
-                      }" x-init="games = await (await fetch('/data/list.json')).json();">
+        <div x-data="gameList()" x-init="init()">
             <input type="text" x-model="search" placeholder="Search..." x-on:input="resetCount">
 
             <table>
@@ -130,7 +117,7 @@
                     <tr>
                         <td class="no-border" colspan="4">
                             <span class="buttons">
-                                <a class="button button-color float-left" x-show="showMore" x-on:click="count += 15">
+                                <a class="button button-color float-left" x-show="showMore" x-on:click="showAllGames">
                                     More ...
                                 </a>
                                 <a class="button button-color float-right" x-on:click="scrollTop">
@@ -142,6 +129,51 @@
                 </tfoot>
             </table>
         </div>
+
+        <script>
+            function gameList() {
+                return {
+                    games: [],
+                    search: '',
+                    count: 15,
+                    showMore: false,
+                    gameId: null,
+                    allGames: [],
+                    async init() {
+                        const match = window.location.pathname.match(/^\/game\/(\d+)/);
+                        if (match) {
+                            this.gameId = match[1];
+                        }
+                        const data = await (await fetch('/data/list.json')).json();
+                        this.games = data;
+                        this.allGames = data;
+                    },
+                    get filteredGames() {
+                        let filtered = this.games;
+                        if (this.gameId) {
+                            filtered = filtered.filter(g => String(g.id) === this.gameId);
+                        }
+                        if (this.search) {
+                            filtered = filtered.filter(g => g.title.toLowerCase().includes(this.search.toLowerCase()));
+                        }
+                        this.showMore = filtered.length > this.count;
+                        return filtered.slice(0, this.count);
+                    },
+                    resetCount() {
+                        this.count = 15;
+                    },
+                    showAllGames() {
+                        if (this.gameId) {
+                            this.gameId = null;
+                            this.games = this.allGames;
+                            this.count = 15;
+                        } else {
+                            this.count += 15;
+                        }
+                    }
+                }
+            }
+        </script>
 
         <script>
             function convertDate(jsonDate) {
